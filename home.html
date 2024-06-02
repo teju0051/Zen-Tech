@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen-Tech</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #000;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #333333);
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 4px 8px rgb(255, 255, 255);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #0ff;
+        }
+        
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        header nav ul li {
+            margin-left: 1rem;
+        }
+        
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+        
+        header nav ul li a:hover {
+            color: #0ff;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+        
+        #hero {
+            background: url('https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?size=626&ext=jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: #0ff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #ccc;
+        }
+        
+        #hero .btn {
+            background: linear-gradient(45deg, #0ff, #00f);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        #hero .btn:hover {
+            background: linear-gradient(45deg, #00f, #0ff);
+            transform: scale(1.1);
+        }
+        
+        #services, #about, #contact {
+            padding: 2rem 0;
+        }
+        
+        #services .container, #about .container, #contact .container {
+            text-align: center;
+        }
+        
+        #services h2, #about h2, #contact h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .service-grid {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+        
+        .service {
+            background: #1a1a1a;
+            padding: 1rem;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            float: left; /* Float the elements to make them inline */
+            margin-right: 1.5%; /* Add some space between elements */
+            margin-bottom: 1rem; /* Add space below each element */
+        }
+        
+        .service:nth-child(3n+4) {
+            clear: left; /* Clear the float after every 3rd element */
+        }
+        
+        
+        .service:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        }
+        
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+        
+            header nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        
+            header nav ul li {
+                margin: 0.5rem;
+                display: inline-block;
+            }
+        
+            #services .service-grid {
+                flex-direction: column;
+            }
+        
+            .service {
+                width: 80%;
+                margin: 1rem auto;
+            }
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #contact label {
+            margin-top: 1rem;
+            align-self: flex-start;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #333;
+            background: #2a2a2a;
+            color: #fff;
+        }
+
+        #contact input[type="submit"] {
+            background: #00f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        #contact input[type="submit"]:hover {
+            background: #0ff;
+            transform: scale(1.05);
+        }
+
+        #contact .confirmation {
+            display: none;
+            margin-top: 1rem;
+            color: #0f0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Zen-Tech</div>
+            <nav>
+                <ul>
+                    <li><a href="https://teju0051.github.io/TService/home.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Welcome to Zen-Tech</h1>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="service-grid">Our Services</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <h3>Language Translator</h3>
+                    <p>Translate easily with our advanced tool.</p>
+                </div>
+                <div class="service">
+<a href="https://teju0051.github.io/Zen-Tech/File-Extension-Convertor.html">
+                    <h3>File Extension Changer</h3>
+                    <p>Change file extensions quickly and effortlessly.</p> </a>
+                </div>
+                <div class="service">
+                    <h3>Background Remover</h3>
+                    <p>Remove backgrounds from images in seconds.</p>
+                </div>
+                <div class="service">
+                    <h3>Build Website</h3>
+                    <p>Make your business go online at lowest cost.</p>
+                </div>
+                <div class="service">
+                    <h3>Chat bot</h3>
+                    <p>Make your website more engaging with our Ai chat bot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Zen-Tech is dedicated to providing top-notch tech services to enhance your digital workflow.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="send_email.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <input type="submit" value="Submit">
+                <div class="confirmation" id="confirmationMessage" style="display:none;">Your message has been received!</div>
+            </form>
+        </div>
+    </section>
+    
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            // Display confirmation message
+            document.getElementById("confirmationMessage").style.display = "block";
+            // You can also reset the form if needed
+            // document.getElementById("contactForm").reset();
+        });
+    </script>
+    <!--Form submission script-->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            var formData = new FormData(this);
+        
+            fetch('send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('confirmationMessage').style.display = 'block';
+            })
+            .catch(error => console.error('Error:', error));
+        });
+        </script>
+        
+    
+        
+    <footer>
+        <div class="container">
+            Copyright &copy; 2024 Zen-Tech. All rights reserved.
+            </div>
+            </footer>
+            </body>
+            </html>
+           
