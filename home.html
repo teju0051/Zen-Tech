@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zen-Tech</title>
+    <title>Zen-Tech: Your Go-To Tech Service Hub</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
@@ -11,14 +11,14 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #fff;
             background-color: #000;
         }
-        
+
         header {
             background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #333333);
             color: #fff;
@@ -28,13 +28,13 @@
             width: 100%;
             z-index: 1000;
         }
-        
+
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         header .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -42,29 +42,29 @@
             letter-spacing: 2px;
             color: #0ff;
         }
-        
+
         header nav ul {
             list-style: none;
             display: flex;
         }
-        
+
         header nav ul li {
             margin-left: 1rem;
         }
-        
+
         header nav ul li a {
-            color: #fff;
+            color: #ffffff; /* Match the color with the background to make the link invisible */
             text-decoration: none;
             padding: 0.5rem 1rem;
             transition: color 0.3s ease, background 0.3s ease;
         }
-        
+
         header nav ul li a:hover {
             color: #0ff;
             background: rgba(0, 0, 0, 0.1);
             border-radius: 4px;
         }
-        
+
         #hero {
             background: url('https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?size=626&ext=jpg') no-repeat center center/cover;
             color: #fff;
@@ -75,7 +75,7 @@
             text-align: center;
             position: relative;
         }
-        
+
         #hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -83,13 +83,13 @@
             color: #0ff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        
+
         #hero p {
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
             color: #ccc;
         }
-        
+
         #hero .btn {
             background: linear-gradient(45deg, #0ff, #00f);
             color: #fff;
@@ -100,30 +100,30 @@
             border-radius: 4px;
             transition: background 0.3s ease, transform 0.3s ease;
         }
-        
+
         #hero .btn:hover {
             background: linear-gradient(45deg, #00f, #0ff);
             transform: scale(1.1);
         }
-        
+
         #services, #about, #contact {
             padding: 2rem 0;
         }
-        
+
         #services .container, #about .container, #contact .container {
             text-align: center;
         }
-        
+
         #services h2, #about h2, #contact h2 {
             margin-bottom: 1rem;
         }
-        
+
         .service-grid {
             display: flex;
             justify-content: space-around;
             margin-top: 2rem;
         }
-        
+
         .service {
             background: #1a1a1a;
             padding: 1rem;
@@ -135,49 +135,48 @@
             margin-right: 1.5%; /* Add some space between elements */
             margin-bottom: 1rem; /* Add space below each element */
         }
-        
+
         .service:nth-child(3n+4) {
             clear: left; /* Clear the float after every 3rd element */
         }
-        
-        
+
         .service:hover {
             transform: scale(1.05);
             box-shadow: 0 0 20px rgba(0,0,0,0.7);
         }
-        
+
         footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
         }
-        
+
         .container {
             width: 80%;
             margin: auto;
         }
-        
+
         @media (max-width: 768px) {
             header .container {
                 flex-direction: column;
             }
-        
+
             header nav ul {
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-        
+
             header nav ul li {
                 margin: 0.5rem;
                 display: inline-block;
             }
-        
+
             #services .service-grid {
                 flex-direction: column;
             }
-        
+
             .service {
                 width: 80%;
                 margin: 1rem auto;
@@ -229,6 +228,22 @@
             color: #0f0;
             font-weight: bold;
         }
+
+        /* New CSS for "Let's Go" button */
+        .service button {
+            background: linear-gradient(45deg, #ff0099, #493240);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .service button:hover {
+            background: linear-gradient(45deg, #493240, #ff0099);
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -260,10 +275,11 @@
                     <h3>Language Translator</h3>
                     <p>Translate easily with our advanced tool.</p>
                 </div>
+
                 <div class="service">
-<a href="https://teju0051.github.io/Zen-Tech/File-Extension-Convertor.html">
                     <h3>File Extension Changer</h3>
-                    <p>Change file extensions quickly and effortlessly.</p> </a>
+                    <p>Change file extensions quickly and effortlessly.</p>
+                    <button onclick="window.location.href='https://teju0051.github.io/Zen-Tech/File-Extension-Convertor.html';">Let's Go</button>
                 </div>
                 <div class="service">
                     <h3>Background Remover</h3>
@@ -303,8 +319,7 @@
             </form>
         </div>
     </section>
-    
-    
+
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent form submission
@@ -318,9 +333,9 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
-        
+
             var formData = new FormData(this);
-        
+
             fetch('send_email.php', {
                 method: 'POST',
                 body: formData
@@ -331,15 +346,12 @@
             })
             .catch(error => console.error('Error:', error));
         });
-        </script>
-        
-    
-        
+    </script>
+
     <footer>
         <div class="container">
             Copyright &copy; 2024 Zen-Tech. All rights reserved.
-            </div>
-            </footer>
-            </body>
-            </html>
-           
+        </div>
+    </footer>
+</body>
+</html>
