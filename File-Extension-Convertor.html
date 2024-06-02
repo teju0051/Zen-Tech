@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All in One File Converter | India's First File Converter </title>
+        
+  <!-- Meta Tags -->
+<meta name="description" content="India's 1st all in one file extension converter proudly presented by our team. More new world records are about to break by our team. We hope you like our services.
+
+'">
+<meta name="keywords" content="file converter, all in one file converter, India's first file converter,">
+<meta name="author" content="Zen-Tech">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ffffff">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="public">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Your App Name">
+<meta name="format-detection" content="telephone=no">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="google" content="notranslate">
+<meta name="searchconsole" content="your-unique-search-console-id">
+<meta name="rating" content="general">
+<meta name="referrer" content="always">
+<meta name="distribution" content="global">
+<meta name="language" content="English">
+<meta name="coverage" content="Worldwide">
+<meta name="revisit-after" content="7 days">
+<meta name="copyright" content="Zen-Tech">
+<meta name="generator" content="T-Service">
+<meta property="og:type" content="website">
+<meta property="og:title" content="All in One File Converter | India's First File Converter">
+<meta property="og:description" content="India's 1st all in one file extension converter proudly presented by our team. More new world records are about to break by our team. We hope you like our services.
+
+'">
+<meta property="og:image" content="#">
+<meta property="og:url" content="https://teju0051.github.io/TService/home.html">
+<meta property="og:site_name" content="T-Service">
+        <meta name="robots" content="index, follow">
+    
+
+    
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 75%;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            transition: right 0.3s ease-in-out;
+            z-index: 1000;
+        }
+        
+        .mobile-nav.show {
+            right: 0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            margin: 20px 0;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+        }
+        
+        @media (max-width: 1000px) {
+            .nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .footer p a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .footer p a:hover {
+            text-decoration: underline;
+        }
+
+        /* File Upload Container Styles */
+        .file-upload-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .file-upload-container input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        
+        .file-upload-container button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .file-upload-container select {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .extension-info {
+            background-color: #ff0000;
+            color: #f1f1f1;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        /* About Us Section Styles */
+        .about-us-section {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        /* Login Page Styles */
+        .login-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+        
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .login-container button {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        /* Popup Styles */
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="company-name">All in one extension converter</div>
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#home" onclick="toggleNav()">Home</a>
+        <a href="#contact" onclick="toggleNav()">Contact</a>
+    </div>
+</header>
+
+<div class="file-upload-container">
+    <h2>Welcome to Change Your File Extension</h2>
+    <form id="fileUploadForm">
+        <input type="file" id="fileInput">
+        <select id="extensionSelect">
+            <option value=".txt">.txt</option>
+            <option value=".pdf">.pdf</option>
+            <option value=".docx">.docx</option>
+            <option value=".png">.png</option>
+            <option value=".jpeg">.jpeg</option>
+            <option value=".doc">.doc</option>
+            <option value=".rtf">.rtf</option>
+            <option value=".wpd">.wpd</option>
+            <option value=".zip">.zip</option>
+            <option value=".rar">.rar</option>
+            <option value=".tar">.tar</option>
+            <option value=".iso">.iso</option>
+            <option value=".7z">.7z</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button type="button" onclick="convertExtension()">Convert</button>
+    </form>
+    <div class="extension-info">
+        If your required extension is not available, please contact us.
+    </div>
+</div>
+
+<div class="about-us-section">
+    <p>India's 1st all in one file extension converter proudly presented by our team. More new world records are about to break by our team. We hope you like our services.</p>
+</div>
+
+<footer class="footer">
+    <p>Extension Converter &copy; 2024 All Rights Reserved | <a href="#" onclick="openPopup()">Privacy Policy</a></p>
+</footer>
+
+<!-- Popup Container -->
+<div class="popup-container" id="popupContainer">
+    <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p>
+            This Privacy Policy governs the manner in which Zen Tech ("we", "us", or "our") doesn't collects, uses, maintains, and/or discloses information from users (each, a "User") of our website. This privacy policy applies to the Site and all products and services offered by Zen-Tech.
+        </p>
+        <!-- Include the rest of your privacy policy content here -->
+    </div>
+</div>
+
+<script>
+    function toggleNav() {
+        var mobileNav = document.getElementById('mobileNav');
+        mobileNav.classList.toggle('show');
+    }
+
+    function openPopup() {
+        var popup = document.getElementById('popupContainer');
+        popup.style.display = 'flex';
+    }
+
+    function closePopup() {
+        var popup = document.getElementById('popupContainer');
+        popup.style.display = 'none';
+    }
+
+    // Swipe detection logic
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    document.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
+
+    function handleGesture() {
+        if (touchendX < touchstartX) {
+            // Swiped left
+        }
+
+        if (touchendX > touchstartX) {
+            // Swiped right
+            var mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('show');
+        }
+    }
+
+    function convertExtension() {
+        var fileInput = document.getElementById('fileInput');
+        var selectedExtension = document.getElementById('extensionSelect').value;
+        var file = fileInput.files[0];
+    
+        if (file) {
+            var reader = new FileReader();
+    
+            reader.onload = function(event) {
+                var data = event.target.result;
+    
+                // Perform conversion based on selected extension
+                var convertedData = convertToExtension(data, selectedExtension);
+    
+                // You can do something with the converted data here (e.g., download it)
+                downloadFile(convertedData, file.name, selectedExtension);
+            };
+    
+            reader.readAsDataURL(file);
+        } else {
+            alert('Please select a file.');
+        }
+    }
+    
+    function convertToExtension(data, extension) {
+       
+        var convertedData = btoa(data);
+        return 'data:application/' + extension.substring(1) + ';base64,' + convertedData;
+    }
+    
+    function downloadFile(data, filename, extension) {
+        // Create a temporary link element
+        var link = document.createElement('a');
+        link.href = data;
+    
+        // Set the download attribute with the filename and extension
+        link.download = filename.replace(/\.[^/.]+$/, "") + extension;
+    
+        // Append the link to the body and trigger the download
+        document.body.appendChild(link);
+        link.click();
+    
+        // Remove the link from the body
+        document.body.removeChild(link);
+    }
+</script>
+</body>
+</html>
