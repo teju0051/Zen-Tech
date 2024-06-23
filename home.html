@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zen-Tech: Your Go-To Tech Service Hub</title>
+    <title>Zen-Tech</title>
+    <meta name="author" content="Zen-Tech">
+    <meta name="owner" content="T-Service">
+    <meta name="description" content="Zen-Tech offers custom website development, eCommerce solutions, responsive design, SEO optimization, and maintenance & support services. Contact us for cost-effective tech solutions.">
+    <meta name="keywords" content="Zen-Tech, tech services, custom website development, eCommerce solutions, responsive design, SEO optimization, maintenance & support">
+
+
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
@@ -11,30 +17,35 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #fff;
             background-color: #000;
+            margin: 0;
         }
-
+        
         header {
             background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #333333);
             color: #fff;
             padding: 1rem 0;
-            box-shadow: 0 4px 8px rgb(255, 255, 255);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: fixed;
             width: 100%;
             z-index: 1000;
+            border-bottom: 2px solid white; /* Correct border-bottom */
         }
-
+        
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
         }
-
+        
         header .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -42,29 +53,40 @@
             letter-spacing: 2px;
             color: #0ff;
         }
-
+        
         header nav ul {
             list-style: none;
             display: flex;
         }
-
+        
         header nav ul li {
             margin-left: 1rem;
         }
-
+        
         header nav ul li a {
-            color: #ffffff; /* Match the color with the background to make the link invisible */
+            color: #fff;
             text-decoration: none;
             padding: 0.5rem 1rem;
             transition: color 0.3s ease, background 0.3s ease;
         }
-
+        
         header nav ul li a:hover {
             color: #0ff;
             background: rgba(0, 0, 0, 0.1);
             border-radius: 4px;
         }
-
+        
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+       
+ 
+        h1{
+            text-align: center;
+        }
         #hero {
             background: url('https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?size=626&ext=jpg') no-repeat center center/cover;
             color: #fff;
@@ -75,7 +97,7 @@
             text-align: center;
             position: relative;
         }
-
+        
         #hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -83,13 +105,13 @@
             color: #0ff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-
+        
         #hero p {
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
-            color: #ccc;
+            color: rgb(0, 255, 162);
         }
-
+        
         #hero .btn {
             background: linear-gradient(45deg, #0ff, #00f);
             color: #fff;
@@ -100,149 +122,321 @@
             border-radius: 4px;
             transition: background 0.3s ease, transform 0.3s ease;
         }
-
+        
         #hero .btn:hover {
             background: linear-gradient(45deg, #00f, #0ff);
             transform: scale(1.1);
         }
-
-        #services, #about, #contact {
+        
+        #services {
+            padding: 2rem 0;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        
+        #services .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        
+        #services h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        #services p {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+        
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        
+        .service {
+            flex: 1 1 calc(33.333% - 40px);
+            padding: 20px;
+            background: rgb(0, 0, 0);
+            color:#0ff;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .service h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .service p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        #about {
             padding: 2rem 0;
         }
-
-        #services .container, #about .container, #contact .container {
+        
+        #about .container {
             text-align: center;
         }
-
-        #services h2, #about h2, #contact h2 {
+        
+        #about h2 {
             margin-bottom: 1rem;
+            color: #fff;
         }
-
-        .service-grid {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 2rem;
+        
+        #about p {
+            color: #ccc;
         }
-
-        .service {
-            background: #1a1a1a;
-            padding: 1rem;
-            width: 30%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            float: left; /* Float the elements to make them inline */
-            margin-right: 1.5%; /* Add some space between elements */
-            margin-bottom: 1rem; /* Add space below each element */
+        
+        #contact {
+            padding: 2rem 0;
         }
-
-        .service:nth-child(3n+4) {
-            clear: left; /* Clear the float after every 3rd element */
+        
+        #contact .container {
+            text-align: center;
         }
-
-        .service:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        
+        #contact h2 {
+            margin-bottom: 1rem;
+            color: #fff;
         }
-
+        
         footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
         }
-
-        .container {
+        
+        /* Form styles */
+        #form {
+            background-color: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
             width: 80%;
-            margin: auto;
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: center;
+            border-bottom: 2px solid white; /* Correct border-bottom */
+            border-top: 2px solid white; /* Correct border-bottom */
+            border-left: 2px solid white; /* Correct border-bottom */
+            border-right: 2px solid white; /* Correct border-bottom */
+           
         }
-
+            
+        
+        
+        .field {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        
+        .field label {
+            display: block;
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 0.5rem;
+        }
+        
+        .field input {
+            display: block;
+            width: calc(100% - 20px);
+            line-height: 1.5;
+            font-size: 1rem;
+            padding: 0.5rem;
+            background-color: #333;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            background-color: #0ff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #00f;
+            color: #fff;
+            transform: scale(1.1);
+        }
+        
+        #testimonial {
+            padding: 3rem 1rem;
+            background-color: #000;
+            color: #333;
+            text-align: center;
+        }
+        
+        #testimonial h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+        
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .testimonial {
+            background: #252525;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            border: 2px solid white; /* Correct border-bottom */
+        }
+         
+        
+        .testimonial img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial blockquote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            quotes: "“" "”" "‘" "’";
+        }
+        
+        .testimonial blockquote::before {
+            content: open-quote;
+            font-size: 2rem;
+            color: #0ff;
+            vertical-align: -0.4rem;
+        }
+        
+        .testimonial blockquote::after {
+            content: close-quote;
+            font-size: 2rem;
+            color: #0ff;
+            vertical-align: -0.4rem;
+        }
+        
+        .testimonial p {
+            font-size: 1rem;
+            color: #ffffff;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonials {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .service {
+                flex: 1 1 calc(50% - 40px);
+            }
+        }
+        
         @media (max-width: 768px) {
             header .container {
                 flex-direction: column;
             }
-
+        
             header nav ul {
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-
+        
             header nav ul li {
                 margin: 0.5rem;
                 display: inline-block;
             }
-
-            #services .service-grid {
+        
+            .service {
+                flex: 1 1 calc(100% - 20px);
+            }
+        
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+        
+            #hero p {
+                font-size: 1rem;
+            }
+        
+            .services-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        
+        @media (max-width: 1024px) {
+            .service {
+                width: calc(50% - 1.5rem);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header .container {
                 flex-direction: column;
             }
-
-            .service {
-                width: 80%;
-                margin: 1rem auto;
+        
+            header nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
             }
-        }
-
-        #contact form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        #contact label {
-            margin-top: 1rem;
-            align-self: flex-start;
-        }
-
-        #contact input, #contact textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-            border-radius: 4px;
-            border: 1px solid #333;
-            background: #2a2a2a;
-            color: #fff;
-        }
-
-        #contact input[type="submit"] {
-            background: #00f;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            margin-top: 1rem;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        #contact input[type="submit"]:hover {
-            background: #0ff;
-            transform: scale(1.05);
-        }
-
-        #contact .confirmation {
-            display: none;
-            margin-top: 1rem;
-            color: #0f0;
-            font-weight: bold;
-        }
-
-        /* New CSS for "Let's Go" button */
-        .service button {
-            background: linear-gradient(45deg, #ff0099, #493240);
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .service button:hover {
-            background: linear-gradient(45deg, #493240, #ff0099);
-            transform: scale(1.1);
+        
+            header nav ul li {
+                margin: 0.5rem;
+                display: inline-block;
+            }
+        
+            .service {
+                width: 100%;
+                margin: 1rem 0;
+            }
+        
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+        
+            #hero p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -252,8 +446,10 @@
             <div class="logo">Zen-Tech</div>
             <nav>
                 <ul>
-                    <li><a href="https://teju0051.github.io/TService/home.html">Home</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonial">Testimonial</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -263,39 +459,108 @@
     <section id="hero">
         <div class="container">
             <h1>Welcome to Zen-Tech</h1>
+
             <a href="#services" class="btn">Explore Services</a>
         </div>
     </section>
 
     <section id="services">
         <div class="container">
-            <h2 class="service-grid">Our Services</h2>
-            <div class="service-grid">
+            <h2>Our Services</h2>
+            <p>We provide comprehensive website development services tailored to meet the needs of businesses, from small enterprises to large corporations. Our cost-effective solutions ensure you get a fully functional website at the lowest possible cost.</p>
+    
+            <div class="services-list">
                 <div class="service">
-                    <h3>Language Translator</h3>
-                    <p>Translate easily with our advanced tool.</p>
-                </div>
-
-                <div class="service">
-                    <h3>File Extension Changer</h3>
-                    <p>Change file extensions quickly and effortlessly.</p>
-                    <button onclick="window.location.href='https://teju0051.github.io/Zen-Tech/File-Extension-Convertor.html';">Let's Go</button>
+                    <h3>Custom Website Development</h3>
+                    <p>Get a website tailored to your unique business needs. We specialize in creating custom designs that reflect your brand's identity.</p>
                 </div>
                 <div class="service">
-                    <h3>Background Remover</h3>
-                    <p>Remove backgrounds from images in seconds.</p>
+                    <h3>eCommerce Solutions</h3>
+                    <p>Build a robust online store with our eCommerce development services. We offer secure, scalable solutions for your business.</p>
                 </div>
                 <div class="service">
-                    <h3>Build Website</h3>
-                    <p>Make your business go online at lowest cost.</p>
+                    <h3>Responsive Design</h3>
+                    <p>Ensure your website looks great and functions perfectly on all devices, including smartphones, tablets, and desktops.</p>
                 </div>
                 <div class="service">
-                    <h3>Chat bot</h3>
-                    <p>Make your website more engaging with our Ai chat bot.</p>
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your website's visibility in search engines with our SEO services. We help drive organic traffic to your site.</p>
+                </div>
+                <div class="service">
+                    <h3>Maintenance & Support</h3>
+                    <p>We provide ongoing maintenance and support to keep your website running smoothly and up-to-date.</p>
                 </div>
             </div>
         </div>
     </section>
+    <section id="testimonial">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="https://i.ibb.co/TY5Kx7G/mgp-symbol.jpg" alt="Client Photo">
+                    <blockquote>Zen-Tech transformed our digital presence. Their team was professional, knowledgeable, and delivered exceptional results.</blockquote>
+                    <p>- Pravartak, Founder of MGP</p>
+                </div>
+                <div class="testimonial">
+                    <img src="https://i.ibb.co/XYFMs7m/Create-a-Logo-Online-Free-Logo-Maker-Generator-TURBOLOGO-Google-Chrome-12-23-2023-11-42-53-AM-transf.png" alt="Client Photo">
+                    <blockquote>The team at Zen-Tech delivered exceptional results on time and within budget.</blockquote>
+                    <p>- Jayesh, Founder of Digital Art</p>
+                </div>
+
+        </div>
+    </section>
+    
+
+ 
+    <form id="form">
+        <h2>Ready to get website?</h2><br>
+        <div class="field">
+            <h1>Get Quote!</h1>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Johndoe@mail.com" required>
+        </div>
+        
+        <div class="field">
+          <label for="businessType">Business Type</label>
+          <input type="text" name="businessType" id="businessType" placeholder="Business, Academy, Shop etc.." required>
+        </div>
+        <div class="field">
+          <label for="content">Content</label>
+          <input type="text" name="content" id="content" required>
+        </div>
+        <input type="submit" id="button" value="Send Email">
+    </form>
+      
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('yPSA5oIYwMA5AlGqm');
+    </script>
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            btn.value = 'Sending...';
+        
+            const serviceID = 'default_service';
+            const templateID = 'template_vs60tf5';
+        
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                    alert('Form has been submitted');
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+        });
+    </script>
 
     <section id="about">
         <div class="container">
@@ -307,46 +572,9 @@
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <form id="contactForm" action="send_email.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <input type="submit" value="Submit">
-                <div class="confirmation" id="confirmationMessage" style="display:none;">Your message has been received!</div>
-            </form>
+            tserviceindiaofficial@proton.me <br> zentechindiaofficial@proton.me
         </div>
     </section>
-
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent form submission
-            // Display confirmation message
-            document.getElementById("confirmationMessage").style.display = "block";
-            // You can also reset the form if needed
-            // document.getElementById("contactForm").reset();
-        });
-    </script>
-    <!--Form submission script-->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            var formData = new FormData(this);
-
-            fetch('send_email.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('confirmationMessage').style.display = 'block';
-            })
-            .catch(error => console.error('Error:', error));
-        });
-    </script>
 
     <footer>
         <div class="container">
