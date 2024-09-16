@@ -1,83 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Under Maintenance</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #e0e0e0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        
-        .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-        }
-        
-        h1 {
-            font-size: 2.8em;
-            color: #2c3e50;
-            margin-bottom: 25px;
-        }
-        
-        p {
-            font-size: 1.3em;
-            color: #7f8c8d;
-            margin-bottom: 40px;
-            line-height: 1.5;
-        }
-        
-        .redirect-btn {
-            text-decoration: none;
-            color: white;
-            background-color: #3498db;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 1.2em;
-            transition: background-color 0.3s ease;
-        }
-        
-        .redirect-btn:hover {
-            background-color: #2980b9;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZenTech</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px;
-            }
+    /* Contact Email Section */
+.contact-email {
+  padding: 20px 0;
+  background-color: #000000;
+  text-align: center;
+}
 
-            h1 {
-                font-size: 2.2em;
-            }
+.contact-email p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
 
-            p {
-                font-size: 1.1em;
-            }
+.contact-email a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
 
-            .redirect-btn {
-                font-size: 1em;
-                padding: 12px 25px;
-            }
-        }
-    </style>
+.contact-email a:hover {
+  color: #f8f8f8; /* Change to your preferred hover color */
+}
+
+.contact-email a:focus {
+  outline: 2px solid #ffffff; /* Change to your preferred focus color */
+}
+
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+     
+      margin: auto;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      background-image: url(https://img.freepik.com/premium-photo/dark-background-with-black-background-white-background_1290686-130877.jpg?w=740);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: 1000;
+      border-bottom: 2px solid white;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo h1 {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+
+    nav {
+      flex: 1;
+      margin-left: 50px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav-links li {
+      margin-left: 25px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #aaa;
+    }
+
+    .cta-button {
+      background-color: #797979;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .cta-button:hover {
+      background-color: #eee;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin-bottom: 4px;
+      border-radius: 2px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://i.ibb.co/w7wNzXs/ZENTECH-removebg-preview.png') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      text-align: center;
+    }
+
+    .hero-content h2 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content p {
+      font-size: 1.3em;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn {
+      background-color: #000;
+      padding: 12px 25px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
+
+    .btn i {
+      margin-left: 10px;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+      text-align: center;
+      
+      background-image: url(https://img.freepik.com/free-vector/luxury-wave-gradient-background-dark-modern-design_343694-3089.jpg?t=st=1726473090~exp=1726476690~hmac=17369d9d1cfa85957d0753b88fe65e397b9cb093dc7efc9fd620d9801b1a7691&w=740);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    
+
+    .services h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color:white;
+      position: relative;
+    }
+
+    .services h2::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background-color: #000;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      background-color: #fff;
+      padding: 30px 20px;
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card i {
+      font-size: 3em;
+      color: #000;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      font-size: 1em;
+      color: #555;
+    }
+
+    /* About Us Section */
+    .about {
+      padding: 60px 0;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      background-image: url(https://img.freepik.com/free-vector/background-abstract-line-digital-gradient-style_483537-2273.jpg?t=st=1726473689~exp=1726477289~hmac=2b6c54c8b839eaeed689b9b2821a9df71f0b0243dfbab9b9d90211b271e5ed0a&w=740);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .about h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.1em;
+      margin-bottom: 40px;
+    }
+
+    .about-features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 30px;
+    }
+
+    .feature i {
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 1em;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 60px 0;
+      color:white;
+      background-color: #000000;
+      text-align: center;
+     
+    }
+
+    .contact h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+ 
+    }
+
+    #contact-form {
+
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .form-group label span {
+      color: #000;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #000;
+      outline: none;
+    }
+
+    #submit-button {
+      background-color: #ff0000;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    #submit-button:hover {
+      background-color: #ffffff;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      border-top: 2px solid white;
+      background-image: url(https://img.freepik.com/premium-photo/dark-background-with-black-background-white-background_1290686-130877.jpg?w=740);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .footer .social-links {
+      margin-top: 10px;
+    }
+
+    .footer .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    .footer .social-links a:hover {
+      color: #aaa;
+    }
+
+
+    /* Contact Section */
+.contact {
+    padding: 60px 0;
+    background-color: #000000;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  
+  #contact-form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+  }
+  #contact-form .a{
+    color:white;
+}
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .field label span {
+    color: #000;
+  }
+  
+  .field input,
+  .field textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .field input:focus,
+  .field textarea:focus {
+    border-color: #000;
+    outline: none;
+  }
+  
+  #button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  #button:hover {
+    background-color: #333;
+  }
+  
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: #000;
+        transition: left 0.3s ease;
+      }
+
+      nav.active {
+        left: 0;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links li {
+        margin: 15px 0;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>We’ll Be Back Soon!</h1>
-        <p>Our website is currently undergoing maintenance to serve you better. We apologize for any inconvenience. Please check back later <br><br> Zentech Operation Team</p>
-        <a href="https://teju0051.github.io/TService/home.html" class="redirect-btn">Return to Homepage</a>
+  <header>
+  
+     
+    
+      <nav id="nav-bar">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="cta-button" href="#contact">Get a Quote</a></li>
+          <li></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content"><br><br><br><br><br><br><br><br><br><br><br>
+      <h2>Innovative Software Solutions</h2>
+      <p>Transforming your ideas into reality with cutting-edge technology and design.</p>
+      <a class="btn" href="#contact">Contact Us <i class="fas fa-chevron-right"></i></a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>Creating responsive and engaging websites tailored to your business needs.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile App Development</h3>
+          <p>Building user-friendly mobile applications that stand out in the market.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Custom Software</h3>
+          <p>Developing custom software solutions to optimize your business processes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We are a dedicated team of professionals, committed to delivering exceptional software solutions that drive success.</p>
+      <div class="about-features">
+        <div class="feature">
+          <i class="fas fa-check-circle"></i>
+          <h3>Experienced Team</h3>
+          <p>Our team brings extensive experience in delivering high-quality software solutions.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-thumbs-up"></i>
+          <h3>Proven Track Record</h3>
+          <p>We have a history of successful projects and satisfied clients.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-user-friends"></i>
+          <h3>Customer Focused</h3>
+          <p>We prioritize your needs and work closely with you to achieve your goals.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>Competitive Pricing</h3>
+          <p>Our services are priced competitively to offer you the best value for your investment.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-cogs"></i>
+          <h3>Tailored Solutions</h3>
+          <p>We provide customized solutions that meet your unique business requirements.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-rocket"></i>
+          <h3>High-Tech Solutions</h3>
+          <p>We leverage the latest technology to deliver innovative and effective solutions.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-trust"></i>
+          <h3>Trusted Partner</h3>
+          <p>We are a reliable partner dedicated to your long-term success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <section class="contact-email">
+      <p>For any query and price, please mail us with your requirements:</p>
+      <a href="mailto:zentechindiaofficial@proton.me">zentechindiaofficial@proton.me</a>
+    </section>
+    <div id="contact-form">
+      <h2>Ready to get a website?</h2>
+      
+      <form id="form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Johndoe@mail.com" required>
+        </div>
+        <div class="field">
+          <label for="businessType">Business Type</label>
+          <input type="text" name="businessType" id="businessType" placeholder="Business, Academy, Shop etc.." required>
+        </div>
+        <div class="field">
+          <label for="content">Content</label>
+          <input type="text" name="content" id="content" required placeholder="Briefly explain what you want in the website.">
+        </div>
+        <input type="submit" id="button" value="Send Email">
+      </form>
+          </div>
+  </section>
+
+  
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('yPSA5oIYwMA5AlGqm');
+    </script>
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            btn.value = 'Sending...';
+        
+            const serviceID = 'default_service';
+            const templateID = 'template_vs60tf5';
+        
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                    alert('Form has been submitted');
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+        });
+    </script>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Zen-Tech. All rights reserved.</p>
+      <!--
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div> -->
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger Menu Toggle
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('nav-bar').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
