@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reading Skill MCQ Quiz</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cf-ui/6.5.1/cf-ui.min.css">
+    <title>Under Maintenance</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,515 +11,47 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             margin: 0;
             padding: 20px;
+            text-align: center;
         }
-        
-        .quiz-container {
+
+        .container {
             background-color: #ffffff; /* Clean white background */
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            max-width: 600px;
             width: 100%;
-            max-width: 750px;
-            text-align: center;
-            border: 2px solid #0056b3; /* Professional blue border */
-            display: flex;
-            flex-direction: column;
-            min-height: 400px;
-            transition: transform 0.3s ease;
         }
-        
-        .quiz-container:hover {
-            transform: translateY(-5px); /* Slight lift effect */
-        }
-        
-        .quiz-container h1 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
+
+        h1 {
+            font-size: 2.5em;
             color: #333333; /* Dark grey for readability */
-            font-weight: 600;
+            margin-bottom: 20px;
         }
-        
-        .question {
-            font-weight: 600;
-            font-size: 1.4em;
-            margin: 20px 0;
-            color: #444444;
-        }
-        
-        .answers label {
-            display: flex;
-            align-items: center;
-            margin: 12px 0;
-            text-align: left;
-            font-size: 1.1em;
-            color: #555555;
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .answers label::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            background-size: cover;
-        }
-        
-        .answers.correct::before {
-            background-image: url('tick-icon.png');
-            background-color: #28a745;
-        }
-        
-        .answers.incorrect::before {
-            background-image: url('cross-icon.png');
-            background-color: #dc3545;
-        }
-        
-        .cf-btn-primary {
-            background-color: #0056b3; /* Professional blue for buttons */
-            color: #ffffff;
-            border: none;
-            padding: 12px 24px;
-            cursor: pointer;
-            border-radius: 4px;
-            margin-top: 15px;
-            font-size: 1em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        
-        .cf-btn-primary:hover {
-            background-color: #004494; /* Darker blue on hover */
-            transform: scale(1.03);
-        }
-        
-        .result {
-            margin-top: 20px;
-            font-size: 1.1em;
-            color: #6c757d; /* Light grey for results */
-        }
-        
-        .footer {
-            margin-top: auto;
-            font-size: 0.9em;
-            color: #000000;
-        }
-        
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-        }
-        
-        .popup {
-            background-color: #ffffff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            z-index: 2;
-            max-width: 400px;
-            width: 85%;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .popup-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .popup-button {
-            background-color: #0056b3;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        
-        .popup-button:hover {
-            background-color: #004494;
-            transform: scale(1.03);
-        }
-        
-        .close-btn {
-            margin-top: 10px;
-            background-color: #dc3545;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        
-        .close-btn:hover {
-            background-color: #c82333;
-            transform: scale(1.03);
-        }
-        
-        #end-quiz-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-        
-        #end-quiz-modal img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-        
-        .timer {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: #ffffff;
-            color: #000000;
-            border: 2px solid #007bff; /* Blue border for the timer */
-            border-radius: 6px;
-            padding: 5px 10px;
+
+        p {
             font-size: 1.2em;
-            font-weight: bold;
-            z-index: 10;
+            color: #555555;
+            margin-bottom: 30px;
         }
-        
-        .timer.warning {
-            color: #ffffff;
-            background-color: #dc3545; /* Red background when warning */
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        .footer {
+            font-size: 0.9em;
+            color: #999999;
         }
     </style>
-    
 </head>
-<div id="timer" class="timer">10:00</div>
-
-
 <body>
-    <div class="overlay" id="overlay"></div>
-    <div class="popup" id="difficulty-popup">
-        <div class="popup-buttons">
-            <h2>Are you ready?</h2>
-            <button class="popup-button" data-difficulty="easy">Let's Go</button>
-           
-        </div>
-     
-    </div>
-    <div class="quiz-container cf-card">
-        <h1>Teacher's Day Quiz</h1>
-        <div id="quiz"></div>
-        <button id="submit" class="cf-btn-primary">Submit</button>
-        <button id="show-answers" class="cf-btn-primary" disabled>Show Answers</button>
-        <button id="end-quiz" class="cf-btn-primary">End Quiz</button>
-        <div id="results" class="result"></div>
+    <div class="container">
+        <h1>We'll Be Back Soon!</h1>
+        <p>Our website is currently undergoing maintenance. We are working hard to improve our services.</p>
+        <p>Thank you for your patience!</p>
         <div class="footer">
             &copy; 2024 Zen-Tech. All rights reserved.
         </div>
     </div>
-    
-    <!-- Modal for displaying the image -->
-    <div id="end-quiz-modal" style="display:none;">
-        <img src="https://i.ibb.co/jVXVSgt/Happy-Teacher-s-Day-Your-dedication-and-passion-for-teaching-make-a-profound-impact-on-all-of-us-Tha.png" alt="End Quiz Image" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const quizContainer = document.getElementById('quiz');
-            const resultsContainer = document.getElementById('results');
-            const submitButton = document.getElementById('submit');
-            const showAnswersButton = document.getElementById('show-answers');
-            const popup = document.getElementById('difficulty-popup');
-            const overlay = document.getElementById('overlay');
-            const closePopupButton = document.getElementById('close-popup');
-            const difficultyButtons = document.querySelectorAll('.popup-button');
-            let selectedDifficulty = null;
-
-            // Sample questions for each difficulty level
-            const questions = {
-                easy: [
-    {
-        question: "The teacher notices that a student is doodling (Scribling on book) instead of taking notes during the lecture. What should the teacher do?",
-        answers: {
-            a: "Confiscate the student's materials.",
-            b: "Ask the student to stop doodling and pay attention.",
-            c: "Move the student to the front of the class.",
-            d: "Check in with the student after class to discuss their focus."
-        },
-        correctAnswer: "d" // 'd' is the correct approach, as it focuses on understanding the student's behavior.
-    },
-    {
-        question: "A student frequently answers questions without raising their hand. How should the teacher respond?",
-        answers: {
-            a: "Ignore the behavior.",
-            b: "Remind the student to raise their hand before speaking.",
-            c: "Allow the student to continue answering without raising their hand.",
-            d: "Tell the student to stop participating."
-        },
-        correctAnswer: "b" // 'b' is the most appropriate response, reinforcing classroom rules.
-    },
-    {
-        question: "A student struggles to complete an in-class assignment. What should the teacher do?",
-        answers: {
-            a: "Offer additional help and guidance.",
-            b: "Tell the student to try harder.",
-            c: "Ignore the student and continue with the lesson.",
-            d: "Ask the student to complete the assignment at home."
-        },
-        correctAnswer: "a" // 'a' is the correct approach, offering support to the student.
-    },
-    {
-        question: "A student frequently forgets to bring their textbook to class. What should the teacher do?",
-        answers: {
-            a: "Scold the student in front of the class.",
-            b: "Offer the student a spare textbook for the class.",
-            c: "Call the student's parents.",
-            d: "Assign the student extra homework as a consequence."
-        },
-        correctAnswer: "b" // 'b' is a practical solution that allows the student to participate in class.
-    },
-    {
-        question: "A student completes their work quickly and becomes restless. What is the best response from the teacher?",
-        answers: {
-            a: "Give the student additional tasks to keep them busy.",
-            b: "Ignore the student's restlessness.",
-            c: "Allow the student to take a break.",
-            d: "Ask the student to help others who are struggling."
-        },
-        correctAnswer: "a" // 'a' keeps the student engaged and productive.
-    },
-    {
-        question: "A student frequently asks for permission to leave the classroom. How should the teacher handle this?",
-        answers: {
-            a: "Allow the student to leave whenever they ask.",
-            b: "Ask the student if something is bothering them.",
-            c: "Refuse to let the student leave the classroom.",
-            d: "Call the student's parents to discuss the issue."
-        },
-        correctAnswer: "b" // 'b' is the best approach, addressing the potential underlying issue.
-    },
-    {
-        question: "A student is talking to a classmate during a test. What should the teacher do?",
-        answers: {
-            a: "Move the student to a different seat.",
-            b: "Give the student a warning.",
-            c: "Ignore the behavior.",
-            d: "Ask both students to leave the classroom."
-        },
-        correctAnswer: "b" // 'b' is the appropriate initial response to manage the situation.
-    },
-    {
-        question: "A student seems sleepy and uninterested during class. How should the teacher respond?",
-        answers: {
-            a: "Allow the student to rest.",
-            b: "Encourage the student to participate more actively.",
-            c: "Speak with the student privately after class.",
-            d: "Send the student to the nurse."
-        },
-        correctAnswer: "c" // 'c' is the correct answer, as it allows the teacher to understand the student's situation.
-    },
-    {
-        question: "A student frequently interrupts others during group discussions. What should the teacher do?",
-        answers: {
-            a: "Ignore the interruptions.",
-            b: "Encourage the student to listen to others.",
-            c: "Tell the student to stop participating.",
-            d: "Move the student to a different group."
-        },
-        correctAnswer: "b" // 'b' is the most constructive approach, promoting respectful communication.
-    },
-    {
-        question: "A student submits a messy and incomplete homework assignment. What should the teacher do?",
-        answers: {
-            a: "Accept the assignment without any comments.",
-            b: "Return the assignment and ask the student to redo it.",
-            c: "Give the student a failing grade.",
-            d: "Praise the student for their effort."
-        },
-        correctAnswer: "b" // 'b' is the correct approach, encouraging the student to improve their work.
-    }
-]
-,
-
-               };
-
-            function displayQuestions(questions) {
-                const output = [];
-                questions.forEach((currentQuestion, questionNumber) => {
-                    const answers = [];
-                    for (let letter in currentQuestion.answers) {
-                        answers.push(
-                            `<label>
-                                <input type="radio" name="question${questionNumber}" value="${letter}">
-                                ${letter} : ${currentQuestion.answers[letter]}
-                            </label>`
-                        );
-                    }
-                    output.push(
-                        `<div class="question">${currentQuestion.question}</div>
-                        <div class="answers">${answers.join('')}</div>`
-                    );
-                });
-                quizContainer.innerHTML = output.join('');
-            }
-
-            function showResults(questions) {
-                const answerContainers = quizContainer.querySelectorAll('.answers');
-                let numCorrect = 0;
-
-                questions.forEach((currentQuestion, questionNumber) => {
-                    const answerContainer = answerContainers[questionNumber];
-                    const selector = `input[name=question${questionNumber}]:checked`;
-                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-                    if (userAnswer === currentQuestion.correctAnswer) {
-                        numCorrect++;
-                        answerContainers[questionNumber].style.color = 'green';
-                    } else {
-                        answerContainers[questionNumber].style.color = 'red';
-                    }
-                });
-
-                resultsContainer.innerHTML = `${numCorrect} out of ${questions.length} correct`;
-            }
-
-            difficultyButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    selectedDifficulty = button.getAttribute('data-difficulty');
-                    if (selectedDifficulty) {
-                        displayQuestions(questions[selectedDifficulty]);
-                        popup.style.display = 'none';
-                        overlay.style.display = 'none';
-                    }
-                });
-            });
-
-            submitButton.addEventListener('click', () => {
-                if (selectedDifficulty) {
-                    showResults(questions[selectedDifficulty]);
-                    showAnswersButton.disabled = false;
-                }
-            });
-
-            showAnswersButton.addEventListener('click', () => {
-                if (selectedDifficulty) {
-                    const answerContainers = quizContainer.querySelectorAll('.answers');
-                    questions[selectedDifficulty].forEach((currentQuestion, questionNumber) => {
-                        const answerContainer = answerContainers[questionNumber];
-                        const correctAnswer = currentQuestion.correctAnswer;
-                        const correctLabel = answerContainer.querySelector(`input[value=${correctAnswer}]`).parentNode;
-                        correctLabel.style.color = 'green';
-                    });
-                }
-            });
-
-
-            document.getElementById('end-quiz').addEventListener('click', function() {
-                // Show the modal with the image
-                var modal = document.getElementById('end-quiz-modal');
-                modal.style.display = 'flex';
-                
-                // Hide the modal after 30 seconds and redirect
-                setTimeout(function() {
-                    modal.style.display = 'none'; // Hide the modal after 10 seconds
-                }, 30000); // 30 seconds
-                
-                // Redirect after 30 seconds
-                setTimeout(function() {
-                    window.location.href = 'https://teju0051.github.io/TService/CS_PPT_login.html';
-                }, 30000); // 30 seconds
-                
-            });
-            
-            
-            
-            window.onload = function () {
-                popup.style.display = 'block';
-                overlay.style.display = 'block';
-            }});
-        </script>
-        <script>
-            document.getElementById("end-quiz").addEventListener("click", function() {
-                if (document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen();
-                } else if (document.documentElement.mozRequestFullScreen) { // Firefox
-                    document.documentElement.mozRequestFullScreen();
-                } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                    document.documentElement.webkitRequestFullscreen();
-                } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-                    document.documentElement.msRequestFullscreen();
-                }
-            });
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const timerElement = document.getElementById('timer');
-                const submitButton = document.getElementById('submit');
-                const endQuizButton = document.getElementById('end-quiz');
-                const quizContainer = document.getElementById('quiz');
-                let timeRemaining = 600; // 10 minutes in seconds
-        
-                function updateTimer() {
-                    const minutes = Math.floor(timeRemaining / 60);
-                    const seconds = timeRemaining % 60;
-                    timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-                    if (timeRemaining <= 15) {
-                        timerElement.classList.add('warning');
-                    }
-                    if (timeRemaining <= 0) {
-                        clearInterval(timerInterval);
-                        submitQuiz();
-                    }
-                    timeRemaining--;
-                }
-        
-                function submitQuiz() {
-                    submitButton.click();
-                    setTimeout(() => {
-                        const endQuizModal = document.getElementById('end-quiz-modal');
-                        endQuizModal.style.display = 'flex';
-                        setTimeout(() => {
-                            endQuizModal.style.display = 'none';
-                            window.location.href = "https://teju0051.github.io/TService/CS_PPT_login.html"; // Change this URL to your desired redirect
-                        }, 30000);
-                    }, 500);
-                }
-        
-                const timerInterval = setInterval(updateTimer, 1000);
-        
-                // Make sure to end the quiz if the user clicks the end quiz button
-                endQuizButton.addEventListener('click', () => {
-                    clearInterval(timerInterval);
-                    submitQuiz();
-                });
-            });
-        </script>
-        
-    </body>
+</body>
 </html>
