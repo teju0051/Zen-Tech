@@ -2,44 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ZenTech</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenTech | Affordable Website & App Development for Small Businesses</title>
+  <meta name="description" content="ZenTech provides affordable website and app development services for small and medium businesses. Partner with us for high-quality custom solutions.">
+  <meta name="keywords" content="website development, app development, software solutions, ZenTech, small business services">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="ZenTech - Affordable Development Solutions">
+  <meta property="og:description" content="Specializing in website and app development for small and medium businesses.">
+  <meta property="og:image" content="https://i.ibb.co/FV3Y1Zx/ZENTECH.png">
+  <meta property="og:url" content="https://teju0051.github.io/Zen-Tech/home.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZenTech - Affordable Development Solutions">
+  <meta name="twitter:description" content="Specializing in website and app development for small and medium businesses.">
+  <meta name="twitter:image" content="https://i.ibb.co/FV3Y1Zx/ZENTECH.png">
+
+  <link rel="icon" type="image/png" href="https://i.ibb.co/FV3Y1Zx/ZENTECH.png">
+  
   <!-- Google Fonts for better typography -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="https://teju0051.github.io/Zen-Tech/home.html">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ZenTech",
+    "url": "https://teju0051.github.io/Zen-Tech/home.html",
+    "logo": "https://i.ibb.co/FV3Y1Zx/ZENTECH.png",
+    "description": "ZenTech provides affordable website and app development services for small and medium businesses.",
+    "sameAs": [
+      "https://www.facebook.com/yourprofile",
+      "https://twitter.com/yourprofile",
+      "https://www.linkedin.com/in/yourprofile"
+    ]
+  }
+  </script>
   <style>
-
-    /* Contact Email Section */
-.contact-email {
-  padding: 20px 0;
-  background-color: #000000;
-  text-align: center;
-}
-
-.contact-email p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-}
-
-.contact-email a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
-}
-
-.contact-email a:hover {
-  color: #f8f8f8; /* Change to your preferred hover color */
-}
-
-.contact-email a:focus {
-  outline: 2px solid #ffffff; /* Change to your preferred focus color */
-}
-
-    /* Reset and Base Styles */
+    /* Reset Styles */
     * {
       margin: 0;
       padding: 0;
@@ -49,29 +58,21 @@
     body {
       font-family: 'Roboto', sans-serif;
       color: #333;
-      background-color: #fff;
+      background-color: #f5f5f5;
       line-height: 1.6;
+      margin: 0; /* Ensure no margin around the body */
     }
 
     .container {
       width: 90%;
-     
+      max-width: 1200px;
       margin: auto;
     }
 
-    /* Header Styles */
+    /* Header Section */
     header {
       background-color: #000;
-      color: #fff;
       padding: 20px 0;
-      position: sticky;
-      top: 0;
-      background-image: url(https://img.freepik.com/premium-photo/dark-background-with-black-background-white-background_1290686-130877.jpg?w=740);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      z-index: 1000;
-      border-bottom: 2px solid white;
     }
 
     header .container {
@@ -80,110 +81,66 @@
       justify-content: space-between;
     }
 
-    .logo h1 {
-      font-size: 1.8em;
-      font-weight: 700;
+    .logo h5 {
+      color: #fff;
+      
+
+    }
+    a{
+      color:white;
+      text-decoration: none;
     }
 
     nav {
       flex: 1;
-      margin-left: 50px;
+      display: flex;
+      justify-content: flex-end;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      justify-content: flex-end;
-    }
-
-    .nav-links li {
-      margin-left: 25px;
+      gap: 20px;
     }
 
     .nav-links a {
       color: #fff;
       text-decoration: none;
+      font-size: 1em;
       font-weight: 500;
-      transition: color 0.3s ease;
+      transition: color 0.3s;
     }
 
     .nav-links a:hover {
       color: #aaa;
     }
 
-    .cta-button {
-      background-color: #797979;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .cta-button:hover {
-      background-color: #eee;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: #fff;
-      margin-bottom: 4px;
-      border-radius: 2px;
-    }
-
     /* Hero Section */
     .hero {
       background: url('https://i.ibb.co/w7wNzXs/ZENTECH-removebg-preview.png') no-repeat center center/cover;
-      height: 80vh;
+      height: 70vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #000000;
-      text-align: center;
-    }
-
-    .hero-content h2 {
-      font-size: 3em;
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    .hero-content p {
-      font-size: 1.3em;
-      margin-bottom: 25px;
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    .btn {
-      background-color: #000;
-      padding: 12px 25px;
       color: #fff;
+      text-align: center;
+      background-size: contain;
+    }
+
+    
+
+    .hero-content a {
+      background-color: #ff0000;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 5px;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
-    .btn:hover {
-      background-color: #333;
-    }
-
-    .btn i {
-      margin-left: 10px;
+    .hero-content a:hover {
+      background-color: #cc0000;
     }
 
     /* Services Section */
@@ -191,18 +148,11 @@
       padding: 60px 0;
       background-color: #f9f9f9;
       text-align: center;
-      
-      background-image: url(https://img.freepik.com/free-vector/luxury-wave-gradient-background-dark-modern-design_343694-3089.jpg?t=st=1726473090~exp=1726476690~hmac=17369d9d1cfa85957d0753b88fe65e397b9cb093dc7efc9fd620d9801b1a7691&w=740);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
     }
-    
 
     .services h2 {
       font-size: 2.5em;
       margin-bottom: 40px;
-      color:white;
       position: relative;
     }
 
@@ -221,17 +171,17 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      gap: 30px;
     }
 
     .service-card {
       background-color: #fff;
-      padding: 30px 20px;
+      padding: 30px;
       width: 100%;
       max-width: 350px;
-      margin-bottom: 30px;
-      border-radius: 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
     }
 
     .service-card:hover {
@@ -241,13 +191,14 @@
 
     .service-card i {
       font-size: 3em;
-      color: #000;
-      margin-bottom: 15px;
+      color: #ff0000;
+      margin-bottom: 20px;
     }
 
     .service-card h3 {
       font-size: 1.5em;
       margin-bottom: 15px;
+      font-weight: 600;
     }
 
     .service-card p {
@@ -261,38 +212,34 @@
       background-color: #000;
       color: #fff;
       text-align: center;
-      background-image: url(https://img.freepik.com/free-vector/background-abstract-line-digital-gradient-style_483537-2273.jpg?t=st=1726473689~exp=1726477289~hmac=2b6c54c8b839eaeed689b9b2821a9df71f0b0243dfbab9b9d90211b271e5ed0a&w=740);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
     }
 
     .about h2 {
       font-size: 2.5em;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     .about p {
       font-size: 1.1em;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .about-features {
       display: flex;
       justify-content: space-around;
+      gap: 30px;
       flex-wrap: wrap;
     }
 
     .feature {
-      width: 100%;
       max-width: 350px;
       margin-bottom: 30px;
     }
 
     .feature i {
       font-size: 3em;
-      color: #fff;
-      margin-bottom: 15px;
+      color: #ff0000;
+      margin-bottom: 20px;
     }
 
     .feature h3 {
@@ -304,369 +251,288 @@
       font-size: 1em;
     }
 
-    /* Contact Section */
-    .contact {
-      padding: 60px 0;
-      color:white;
-      background-color: #000000;
-      text-align: center;
-     
-    }
+/* Contact Section Styles */
+#contact {
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+}
 
-    .contact h2 {
-      font-size: 2.5em;
-      margin-bottom: 40px;
- 
-    }
+#contact h2 {
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-    #contact-form {
+#form {
+  max-width: 400px;
+  margin: 0 auto;
+}
 
-      max-width: 600px;
-      margin: auto;
-      text-align: left;
-    }
+.field {
+  margin-bottom: 20px;
+}
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e60000;
+  margin-bottom: 5px;
+}
 
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  transition: border-color 0.3s;
+}
 
-    .form-group label span {
-      color: #000;
-    }
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #e60000;
+  outline: none;
+}
 
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
+input::placeholder {
+  color: #ccc;
+}
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #000;
-      outline: none;
-    }
+#button {
+  width: 100%;
+  padding: 12px;
+  background: #e60000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-    #submit-button {
-      background-color: #ff0000;
-      color: #fff;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }
+#button:hover {
+  background: #cc0000;
+}
 
-    #submit-button:hover {
-      background-color: #ffffff;
-    }
 
-    /* Footer Styles */
+@media (max-width: 768px) {
+  #contact h2 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    font-size: 14px;
+  }
+
+  #button {
+    font-size: 16px;
+  }
+}
+
+
+    /* Footer */
     footer {
       background-color: #000;
       color: #fff;
       padding: 20px 0;
       text-align: center;
-      border-top: 2px solid white;
-      background-image: url(https://img.freepik.com/premium-photo/dark-background-with-black-background-white-background_1290686-130877.jpg?w=740);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
     }
 
-    .footer .social-links {
-      margin-top: 10px;
-    }
-
-    .footer .social-links a {
+    .social-links a {
       color: #fff;
       margin: 0 10px;
       font-size: 1.2em;
-      transition: color 0.3s ease;
+      transition: color 0.3s;
     }
 
-    .footer .social-links a:hover {
+    .social-links a:hover {
       color: #aaa;
     }
 
-
-    /* Contact Section */
-.contact {
-    padding: 60px 0;
-    background-color: #000000;
-    text-align: center;
-  }
-  
-  .contact h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-  }
-  
-  #contact-form {
-    max-width: 600px;
-    margin: auto;
-    text-align: left;
-  }
-  #contact-form .a{
-    color:white;
-}
-  
-  .field {
-    margin-bottom: 20px;
-  }
-  
-  .field label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
-  
-  .field label span {
-    color: #000;
-  }
-  
-  .field input,
-  .field textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  .field input:focus,
-  .field textarea:focus {
-    border-color: #000;
-    outline: none;
-  }
-  
-  #button {
-    background-color: #000;
-    color: #fff;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-  }
-  
-  #button:hover {
-    background-color: #333;
-  }
-  
-    /* Responsive Styles */
+    /* Media Queries for Mobile Responsiveness */
     @media (max-width: 768px) {
-      nav {
-        position: absolute;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        background-color: #000;
-        transition: left 0.3s ease;
-      }
-
-      nav.active {
-        left: 0;
-      }
-
-      .nav-links {
+      .service-cards, 
+      .about-features {
         flex-direction: column;
         align-items: center;
       }
 
-      .nav-links li {
-        margin: 15px 0;
+      nav {
+        flex-direction: column;
+        align-items: center;
       }
 
-      .hamburger {
-        display: flex;
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
       }
+    }
+    h2{
+      text-align:center;
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-  
-     
+    <div class="container">
+      <div class="logo">
+        <h5> <i class="fas fa-envelope"></i>
+          <a href="mailto:zentechindiaofficial@proton.me">zentechindiaofficial@proton.me</a></h5> 
+      </div>
     
-      <nav id="nav-bar">
+      <nav>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a class="cta-button" href="#contact">Get a Quote</a></li>
-          <li></li>
         </ul>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </nav>
+      
     </div>
+    
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content"><br><br><br><br><br><br><br><br><br><br><br>
-      <h2>Innovative Software Solutions</h2>
-      <p>Transforming your ideas into reality with cutting-edge technology and design.</p>
-      <a class="btn" href="#contact">Contact Us <i class="fas fa-chevron-right"></i></a>
+     
+      <a href="#contact">Get your Quote! <i class="fas fa-chevron-right"></i></a>
     </div>
   </section>
 
-  <section class="services" id="services">
+  <!-- Services Section -->
+  <section id="services" class="services">
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-cards">
         <div class="service-card">
           <i class="fas fa-laptop-code"></i>
           <h3>Web Development</h3>
-          <p>Creating responsive and engaging websites tailored to your business needs.</p>
+          <p>We provide responsive, high-performing websites tailored to your business needs.</p>
         </div>
         <div class="service-card">
           <i class="fas fa-mobile-alt"></i>
-          <h3>Mobile App Development</h3>
-          <p>Building user-friendly mobile applications that stand out in the market.</p>
+          <h3>Mobile Apps</h3>
+          <p>Custom mobile applications that bring your brand into the hands of your audience.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-cogs"></i>
-          <h3>Custom Software</h3>
-          <p>Developing custom software solutions to optimize your business processes.</p>
+          <i class="fas fa-code"></i>
+          <h3>Custom Software Development</h3>
+          <p>Tailored software solutions designed to meet the specific needs of your business.</p>
         </div>
+        
       </div>
     </div>
   </section>
 
-  <section class="about" id="about">
+  <!-- About Section -->
+  <section id="about" class="about">
     <div class="container">
       <h2>About Us</h2>
-      <p>We are a dedicated team of professionals, committed to delivering exceptional software solutions that drive success.</p>
+      <p>ZenTech is dedicated to delivering high-quality software solutions that drive innovation and growth for small and medium businesses worldwide.</p>
       <div class="about-features">
         <div class="feature">
-          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-users"></i>
           <h3>Experienced Team</h3>
-          <p>Our team brings extensive experience in delivering high-quality software solutions.</p>
+          <p>Our team of professionals brings extensive expertise to every project.</p>
         </div>
         <div class="feature">
-          <i class="fas fa-thumbs-up"></i>
+          <i class="fas fa-award"></i>
           <h3>Proven Track Record</h3>
-          <p>We have a history of successful projects and satisfied clients.</p>
-        </div>
-        <div class="feature">
-          <i class="fas fa-user-friends"></i>
-          <h3>Customer Focused</h3>
-          <p>We prioritize your needs and work closely with you to achieve your goals.</p>
-        </div>
-        <div class="feature">
-          <i class="fas fa-dollar-sign"></i>
-          <h3>Competitive Pricing</h3>
-          <p>Our services are priced competitively to offer you the best value for your investment.</p>
+          <p>We have a long history of successfully delivering software solutions.</p>
         </div>
         <div class="feature">
           <i class="fas fa-cogs"></i>
           <h3>Tailored Solutions</h3>
-          <p>We provide customized solutions that meet your unique business requirements.</p>
-        </div>
-        <div class="feature">
-          <i class="fas fa-rocket"></i>
-          <h3>High-Tech Solutions</h3>
-          <p>We leverage the latest technology to deliver innovative and effective solutions.</p>
-        </div>
-        <div class="feature">
-          <i class="fas fa-trust"></i>
-          <h3>Trusted Partner</h3>
-          <p>We are a reliable partner dedicated to your long-term success.</p>
+          <p>We design solutions specifically to meet the unique needs of each client.</p>
         </div>
       </div>
+      
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <section class="contact-email">
-      <p>For any query and price, please mail us with your requirements:</p>
-      <a href="mailto:zentechindiaofficial@proton.me">zentechindiaofficial@proton.me</a>
-    </section>
-    <div id="contact-form">
-      <h2>Ready to get a website?</h2>
-      
-      <form id="form">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required>
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Johndoe@mail.com" required>
-        </div>
-        <div class="field">
-          <label for="businessType">Business Type</label>
-          <input type="text" name="businessType" id="businessType" placeholder="Business, Academy, Shop etc.." required>
-        </div>
-        <div class="field">
-          <label for="content">Content</label>
-          <input type="text" name="content" id="content" required placeholder="Briefly explain what you want in the website.">
-        </div>
-        <input type="submit" id="button" value="Send Email">
-      </form>
-          </div>
-  </section>
+  <!-- Contact Section -->
+ 
+  <form id="form"><br><br>
+    <h2>Get in Touch!</h2>
+    <div class="field">
+      <label for="name">Name of your organisation</label>
+      <input type="text" name="name" id="name" placeholder="John Doe" required>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Johndoe@mail.com" required>
+    </div>
+    <div class="field">
+      <label for="businessType">Business Type</label>
+      <input type="text" name="businessType" id="businessType" placeholder="Business, Academy, Shop etc.." required>
+    </div>
+    <div class="field">
+      <label for="content">Content</label>
+      <input type="text" name="content" id="content" required placeholder="Briefly explain what you want in the website.">
+    </div>
+    <input type="submit" id="button" value="Send Email">
+  </form><br><br>
+      </div>
+</section>
 
-  
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        emailjs.init('yPSA5oIYwMA5AlGqm');
-    </script>
-    <script>
-        const btn = document.getElementById('button');
+<script type="text/javascript">
+    emailjs.init('yPSA5oIYwMA5AlGqm');
+</script>
+<script>
+  // Get the button element by its ID
+  const btn = document.getElementById('button');
 
-        document.getElementById('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-        
-            btn.value = 'Sending...';
-        
-            const serviceID = 'default_service';
-            const templateID = 'template_vs60tf5';
-        
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    btn.value = 'Send Email';
-                    alert('Form has been submitted');
-                }, (err) => {
-                    btn.value = 'Send Email';
-                    alert(JSON.stringify(err));
-                });
-        });
-    </script>
+  // Add an event listener to the form for the submit event
+  document.getElementById('form').addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+  
+      // Change the button text to indicate that the form is being sent
+      btn.value = 'Sending...';
+  
+      // Define the service ID for email sending
+      const serviceID = 'default_service';
+      // Define the template ID for the email format
+      const templateID = 'template_vs60tf5';
+  
+      // Use EmailJS to send the form data
+      emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+              // Reset the button text once the email is sent successfully
+              btn.value = 'Send Email';
+              // Show a success alert to the user
+              alert('Your request has been submitted. Our team will contact you shortly.');
+          }, (err) => {
+              // Reset the button text if there’s an error
+              btn.value = 'Send Email';
+              // Show an error alert with the error message
+              alert(JSON.stringify(err));
+          });
+  });
+</script>
 
+
+
+  <!-- Footer Section -->
   <footer>
     <div class="container">
-      <p>&copy; 2024 Zen-Tech. All rights reserved.</p>
-      <!--
-      <div class="social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div> -->
+      <p>&copy; 2024 ZenTech. All Rights Reserved.</p>
+      
     </div>
   </footer>
-
-  <script>
-    // Hamburger Menu Toggle
-    document.getElementById('hamburger').addEventListener('click', function() {
-      document.getElementById('nav-bar').classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
