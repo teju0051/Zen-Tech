@@ -1,0 +1,188 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> /*Begins internal CSS styles */
+
+        body { /* Styles the body element */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Sets the font family */
+            display: flex; /* Uses flexbox layout */
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            height: 100vh; /* Sets the body height to full viewport height */
+            margin: 0; /* Removes default margin */
+            background-color: #e0e0e0; /* Sets the background color */
+        }
+        
+        form { /* Styles the form element */
+            width: 320px; /* Sets the form width */
+            background-color: white; /* Sets the form background color */
+            border-radius: 10px; /* Rounds the form corners */
+            overflow: hidden; /* Hides overflow content */
+            text-align: center; /* Centers text inside the form */
+        }
+        
+        .h1 { /* Styles elements with class 'h1' */
+            background-color: rgb(62, 130, 255); /* Sets background color */
+            color: rgb(0, 0, 0); /* Sets text color */
+            padding: 2px 0; /* Adds vertical padding */
+            font-weight: bold; /* Makes text bold */
+        }
+        
+        label { /* Styles label elements */
+            display: block; /* Makes label display as block */
+            margin: 15px 0 5px; /* Sets top, right/left, bottom margins */
+            text-align: left; /* Aligns text to the left */
+            font-size: 14px; /* Sets font size */
+            padding-left: 20px; /* Adds left padding */
+            color: #333; /* Sets label text color */
+        }
+        
+        input[type="text"], /* Styles text input fields */
+        input[type="password"] { /* Styles password input fields */
+            width: 90%; /* Sets input width to 90% */
+            padding: 10px; /* Adds padding inside inputs */
+            margin: 8px 0; /* Sets vertical margins */
+            border: 1px solid #ddd; /* Sets input border */
+            border-radius: 6px; /* Rounds input corners */
+            box-sizing: border-box; /* Includes padding and border in width */
+            font-size: 16px; /* Sets input font size */
+        }
+
+        .button-link-container { /* Styles the button-link container */
+            display: flex; /* Uses flexbox layout */
+            justify-content: space-between; /* Spaces items apart */  /*You can also Use float:left/right here */
+            align-items: center; /* Aligns items vertically center */
+            margin-top: 10px; /* Adds top margin */
+            padding: 0 10px; /* Adds horizontal padding */
+        }
+
+        button { /* Styles button elements */
+            padding: 12px; /* Adds padding inside button */
+            color: white; /* Sets button text color */
+            background-color: rgb(62, 130, 255); /* Sets button background color */
+            border: none; /* Removes button border */
+            border-radius: 6px; /* Rounds button corners */
+            cursor: pointer; /* Changes cursor on hover */
+            font-size: 16px; /* Sets button font size */
+            width: 70px; /* Sets button width */
+        }
+
+        button:hover { /* Styles button on hover */
+            background-color: #0056b3; /* Changes background color on hover */
+        }
+
+        a { /* Styles anchor elements */
+            color: #007bff; /* Sets link color */
+            font-size: 14px; /* Sets link font size */
+            text-decoration: none; /* Removes underline from links */
+        }
+
+        a:hover { /* Styles links on hover */
+            text-decoration: underline; /* Underlines link on hover */
+        }
+
+        .footer-link-center { /* Styles footer link container */
+            display: block; /* Makes it display as block */
+            background-color: #f0f0f0; /* Sets background color */
+            color: #333; /* Sets text color */
+            padding: 12px; /* Adds padding */
+            margin-top: 20px; /* Adds top margin */
+            border-radius: 6px; /* Rounds corners */
+            text-align: center; /* Centers text */
+            font-weight: 500; /* Sets font weight */
+        }
+           /* Popup styles */
+           .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none; /* Hidden initially */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .popup-content h2 {
+            margin: 0 0 10px;
+        }
+
+        .popup-content p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .popup-content button {
+            padding: 10px 0px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-content button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body> <!--- Begins the body of the document  -->
+      <!-- Popup structure -->
+      <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <h2>Tips</h2>
+            <p>We have used advanced CSS here that you might not be familiar with. We have added comments to give you an idea about how the CSS works. If you think there is an error, please notify Tejas. If you are still unable to understand, please take guidance from Sir.</p>
+            <button onclick="closePopup()">Confirm</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to display the popup
+        function showPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        // Show the popup when the page loads
+        window.onload = function() {
+            showPopup();
+        };
+    </script>
+    <form> 
+        <div class="h1"> 
+            <h1>User Login</h1> 
+        </div>
+        
+        <label>Username</label>
+        <input type="text" required placeholder="Username"> 
+        <label>Password</label> 
+        <input type="password" required placeholder="Password">
+        
+        <div class="button-link-container"> 
+            <button>Login</button>
+            <a href="#">Forgot Password?</a> 
+        </div>
+        
+        <a href="#" class="footer-link-center">Main Website</a> 
+    </form>
+    
+    
+</body>
+</html>
