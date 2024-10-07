@@ -7,14 +7,14 @@
   <meta name="description" content="ZenTech provides affordable website and app development services for small and medium businesses. Partner with us for high-quality custom solutions.">
   <meta name="keywords" content="website development, app development, software solutions, ZenTech, small business services">
   
-  <!-- Open Graph -->
+
   <meta property="og:title" content="ZenTech - Affordable Development Solutions">
   <meta property="og:description" content="Specializing in website and app development for small and medium businesses.">
   <meta property="og:image" content="https://i.ibb.co/FV3Y1Zx/ZENTECH.png">
   <meta property="og:url" content="https://teju0051.github.io/Zen-Tech/home.html">
   <meta property="og:type" content="website">
 
-  <!-- Twitter Card -->
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ZenTech - Affordable Development Solutions">
   <meta name="twitter:description" content="Specializing in website and app development for small and medium businesses.">
@@ -22,16 +22,16 @@
 
   <link rel="icon" type="image/png" href="https://i.ibb.co/FV3Y1Zx/ZENTECH.png">
   
-  <!-- Google Fonts for better typography -->
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome for icons -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Canonical Tag -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
   <link rel="canonical" href="https://teju0051.github.io/Zen-Tech/home.html">
   
-  <!-- Structured Data -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -250,18 +250,17 @@
     .feature p {
       font-size: 1em;
     }
-
 /* Contact Section Styles */
 #contact {
-  background: #f9f9f9;
+  background: #fff; /* White background for the contact section */
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border: 2px solid #fff;
+  border: 2px solid #e60000; /* Red border */
 }
 
 #contact h2 {
-  color: #000;
+  color: #e60000; /* Red text for the header */
   text-align: center;
   font-size: 28px;
   font-weight: bold;
@@ -279,7 +278,7 @@
 label {
   font-size: 16px;
   font-weight: bold;
-  color: #e60000;
+  color: #e60000; /* Red label text */
   margin-bottom: 5px;
 }
 
@@ -288,28 +287,28 @@ input[type="email"] {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #fff;
+  border: 2px solid #e60000; /* Red border for inputs */
   border-radius: 5px;
-  background: #333;
-  color: #fff;
+  background: #f2f2f2; /* Light gray background for inputs */
+  color: #333; /* Dark text color */
   transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus {
-  border-color: #e60000;
+  border-color: #cc0000; /* Darker red on focus */
   outline: none;
 }
 
 input::placeholder {
-  color: #ccc;
+  color: #999; /* Gray placeholder text */
 }
 
 #button {
   width: 100%;
   padding: 12px;
-  background: #e60000;
-  color: #fff;
+  background: #e60000; /* Red background for the button */
+  color: #fff; /* White text for the button */
   font-size: 18px;
   font-weight: bold;
   border: none;
@@ -319,9 +318,166 @@ input::placeholder {
 }
 
 #button:hover {
-  background: #cc0000;
+  background: #cc0000; /* Darker red on hover */
 }
 
+/* Our New Feature Section */
+.new-feature {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .new-feature h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .new-feature h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+  }
+  
+  .feature-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+  }
+  
+  .feature-left, .feature-right {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .feature-left i, .feature-right i {
+    font-size: 3em;
+    color: #ff0000;
+    margin-bottom: 20px;
+  }
+  
+  .feature-left h3, .feature-right h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .feature-left p, .feature-right p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .feature-button {
+    background-color: #e60000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .feature-button:hover {
+    background-color: #cc0000;
+  }
+  
+  .vertical-line {
+    width: 2px;
+    background-color: #ccc;
+    height: auto;
+    align-self: stretch;
+  }
+
+  
+  .our-plans {
+    padding: 60px 0;
+    background-color: #ffffff; /* White background for a clean look */
+    text-align: center;
+    position: relative; /* Ensure positioning for the vertical line */
+}
+
+.our-plans h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #c8102e; /* Red color for the heading */
+}
+
+.pricing {
+    display: flex;
+    justify-content: center; /* Center the plans evenly */
+    align-items: flex-start;
+    flex-wrap: nowrap; /* No wrapping */
+    gap: 30px; /* Space between the plans */
+}
+
+.plan-container {
+    flex: 1; /* Allow plans to take equal space */
+    position: relative; /* Allow absolute positioning of vertical line */
+}
+
+.vertical-line {
+    width: 2px; /* Width of the vertical line */
+    background-color: #c8102e; /* Red color for the vertical line */
+    height: auto; /* Automatic height adjustment */
+}
+
+.plan {
+    background-color: #f9f9f9; /* Light gray background for each plan */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Add smooth shadow transition */
+    border: none; /* Remove the border around the plan */
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.plan h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #c8102e; /* Red color for plan titles */
+}
+
+.plan ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Align text to the left */
+    color: #333; /* Dark text color for better readability */
+}
+
+.plan li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 1.1em; /* Slightly larger font for list items */
+}
+
+  
+  @media (max-width: 768px) {
+    .feature-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .vertical-line {
+      display: none;
+    }
+    
+    .feature-left, .feature-right {
+      max-width: 100%;
+    }
+  }
+  
 
 @media (max-width: 768px) {
   #contact h2 {
@@ -382,7 +538,7 @@ input::placeholder {
   </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header>
     <div class="container">
       <div class="logo">
@@ -403,7 +559,7 @@ input::placeholder {
     
   </header>
 
-  <!-- Hero Section -->
+
   <section class="hero">
     <div class="hero-content"><br><br><br><br><br><br><br><br><br><br><br>
      
@@ -411,7 +567,7 @@ input::placeholder {
     </div>
   </section>
 
-  <!-- Services Section -->
+
   <section id="services" class="services">
     <div class="container">
       <h2>Our Services</h2>
@@ -436,7 +592,105 @@ input::placeholder {
     </div>
   </section>
 
-  <!-- About Section -->
+ 
+<section id="new-feature" class="new-feature">
+    <div class="container">
+      <h2>Freedom Choice</h2>
+      <div class="feature-content">
+      
+        <div class="feature-left">
+            <i class="fas fa-users"></i> 
+          <h3>Code with your Team</h3>
+          <p>Empower your team with the tools and resources  including our AI powered tools to develop your own business requirements.</p>
+          <a href="#form" class="feature-button">Request a Quote</a>
+        </div>
+        
+       
+        <div class="vertical-line"></div>
+        
+       
+        <div class="feature-right">
+          <i class="fas fa-handshake"></i> 
+          <h3>Leave It to Us</h3>
+          <p>Let our expert team handle your development projects with professionalism and excellence.</p>
+          <a href="#form" class="feature-button">Request a Quote</a>
+          
+    
+        </div>
+        
+  </section>
+  <section id="our-plans" class="our-plans">
+    <div class="container">
+      <h2>Our Plans</h2>
+      <div class="pricing">
+        <div class="plan-container">
+          <div class="plan">
+            <h3>Basic</h3>
+            <p>Price: <strong>₹3499</strong>/year</p>
+            OR
+            <p>Price: <strong>₹299</strong>/month</p>
+            <pre>Recommended for portfolio, Personal Use</pre><br><br>
+            <p>What you'll get:</p>
+            <ul>
+              <li>✓ Basic website design</li>
+              <li>✓ Responsive layout</li>
+              <li>✓ 1 year free support</li>
+              <li>✓ 1 GB of storage</li>
+            </ul>
+          </div>
+        </div>
+        <div class="vertical-line"></div> 
+        <div class="plan-container">
+          <div class="plan">
+            <h3>Advanced</h3>
+            <p>Price: <strong>₹7099</strong>/year</p>
+            OR
+            <p>Price: <strong>₹599</strong>/month</p>
+            <pre>Recommended for School, Colleges, Academy, Shop</pre><br><br>
+            <p>What you'll get:</p>
+            <ul>
+              <li>✓ Includes all basic features</li>
+              <li>✓ SEO optimization</li>
+              <li>✓ 2+1 years free support</li>
+              <li>✓ 5+1 GB of storage</li>
+              <li>✓ Business Email</li>
+              <li>✓ Contact Form Integration</li>
+              <li>✓ Mobile-friendly design</li>
+              <li>✓ Custom domain name</li>
+            </ul>
+          </div>
+        </div>
+        <div class="vertical-line"></div> 
+        <div class="plan-container">
+          <div class="plan">
+            <h3>Organizations</h3>
+            <p>Price: <strong>₹14299</strong>/year</p>
+            OR
+            <p>Price: <strong>₹1199</strong>/month</p>
+            <pre>Recommended for E-Commerce, World-wide Connections.</pre><br><br>
+            <p>What you'll get:</p>
+            <ul>
+              <li>✓ Advanced website features</li>
+              <li>✓ Performance optimization</li>
+              <li>✓ 3 years free support</li>
+              <li>✓ 10 GB of storage</li>
+              <li>✓ Integrated payment gateway</li>
+              <li>✓ AI Powered</li>
+              <li>✓ E-Commerce</li>
+              <li>✓ Mobile-friendly design</li>
+              <li>✓ Dedicated account manager</li>
+              <li>✓ 24/7 customer support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+
+
   <section id="about" class="about">
     <div class="container">
       <h2>About Us</h2>
@@ -462,7 +716,7 @@ input::placeholder {
     </div>
   </section>
 
-  <!-- Contact Section -->
+ 
  
   <form id="form"><br><br>
     <h2>Get in Touch!</h2>
@@ -527,7 +781,7 @@ input::placeholder {
 
 
 
-  <!-- Footer Section -->
+
   <footer>
     <div class="container">
       <p>&copy; 2024 ZenTech. All Rights Reserved.</p>
