@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333333;
+            font-size: 1.6em;
+        }
+
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        input, select {
+            margin-top: 8px;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        select {
+            appearance: none;
+        }
+
+        .checkbox-group {
+          
+            align-items: center;
+            margin-top: 20px;
+        }
+
+       
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+
+        .buttons button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .create-account {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+
+        .create-account:hover {
+            background-color: #218838;
+        }
+
+        .cancel {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+
+        .cancel:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="registration-form">
+            <h2>Company Information</h2>
+
+            <label for="company-name">Company Name *</label>
+            <input type="text" id="company-name" name="company-name" required>
+
+            <label for="industry">Industry *</label>
+            <select id="industry" name="industry" required>
+                <option value="" disabled selected>Select Industry</option>
+                <option value="industry1">Gaming</option>
+                <option value="industry2">Agency</option>
+            </select>
+
+            <label for="company-address">Company Address *</label>
+            <input type="text" id="company-address" name="company-address" required>
+
+            <label for="state">State *</label>
+            <select id="state" name="state" required>
+                <option value="" disabled selected>Select State</option>
+                <option value="state1">Maharashtra</option>
+                <option value="state2">Delhi</option>
+            </select>
+
+            <label for="city">City *</label>
+            <select id="city" name="city" required>
+                <option value="" disabled selected>Select City</option>
+                <option value="city1">Panvel</option>
+                <option value="city2">Vashi</option>
+            </select>
+
+            <label for="zip-code">Zip Code *</label>
+            <input type="text" id="zip-code" name="zip-code" required>
+
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" placeholder="Enter 10-digit number">
+
+            <label for="website-url">Company Website</label>
+            <input type="url" id="website-url" name="website-url" placeholder="https://">
+
+            <h2>Contact Person Information</h2>
+
+            <label for="contact-person">Contact Name *</label>
+            <input type="text" id="contact-person" name="contact-person" required>
+
+            <label for="mobile-number">Mobile Number *</label>
+            <input type="tel" id="mobile-number" name="mobile-number" pattern="[0-9]{10}" placeholder="Enter 10-digit number" required>
+
+            <h2>Account Information</h2>
+
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <label for="confirm-password">Confirm Password *</label>
+            <input type="password" id="confirm-password" name="confirm-password" minlength="8" required>
+
+            <!-- Newsletter Subscription Checkbox -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Subscribe to Newsletter</label>
+            </div>
+
+            <!-- Terms and Conditions Checkbox -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="create-account">Create Account</button>
+                <button type="button" class="cancel" onclick="window.location.href='https://teju0051.github.io/Zen-Tech/index.html';">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
