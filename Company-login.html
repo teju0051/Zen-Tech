@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header and Content Positioning</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav .nav-links li {
+      position: relative;
+    }
+
+    nav .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+    }
+
+    nav .nav-links a:hover {
+      background-color: #555;
+      border-radius: 4px;
+    }
+
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      list-style: none;
+      padding: 10px 0;
+      border-radius: 4px;
+    }
+
+    nav .dropdown-content li {
+      width: 100%;
+    }
+
+    nav .dropdown-content a {
+      padding: 8px 12px;
+      display: block;
+      color: #fff;
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Breadcrumb style */
+    .breadcrumb {
+      margin-top: 70px; /* Adjust to be below the fixed header */
+      background-color: #f4f4f4;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .breadcrumb a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    /* Ensure the content is below the breadcrumb */
+    .content {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 140px); /* Adjust height considering header and breadcrumb */
+    }
+
+    .container {
+      display: flex;
+      width: 800px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+
+    .login {
+      flex: 1;
+      padding-right: 40px;
+      border-right: 1px solid #ccc;
+    }
+
+    .login h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .login p {
+      margin-bottom: 20px;
+    }
+
+    .login label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .login input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .login input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .login a {
+      font-size: 12px;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .signup {
+      flex: 1;
+      padding-left: 40px;
+    }
+
+    .signup h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #a94442;
+    }
+
+    .signup button {
+      padding: 10px 20px;
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    .signup ul {
+      padding-left: 20px;
+    }
+
+    .signup li {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://i.ibb.co/w7wNzXs/ZENTECH-removebg-preview.png" alt="T-Service Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="https://teju0051.github.io/Zen-Tech/index.html">Home</a></li>
+        <li><a href="#">Search Job</a></li>
+        <li><a href="#">Job Seeker</a></li>
+        <li><a href="https://teju0051.github.io/Zen-Tech/login.html">Employer</a></li>
+        <li class="dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Service 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <a href="https://teju0051.github.io/Zen-Tech/index.html">Home</a> &gt; Employer
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="login">
+        <h2>Already a member? Sign In</h2>
+        <p>Not a member! <a href="#">Click here to register.</a></p>
+        <form>
+          <label for="email">User Name</label>
+          <input type="email" id="email" placeholder="Email">
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Password">
+
+          <input type="submit" value="Login">
+          <a href="#">Forgot Password?</a>
+        </form>
+      </div>
+
+      <div class="signup">
+        <h2>Don't have an account? Create here!!!</h2>
+        <button>Sign Up</button>
+        <ul>
+          <li>Looking to post a job online? You are at the right place. JobIndex provides online job posting service for regions across India. Once a job posting is live you can start receiving job applications from the prospective candidates.</li>
+          <li>Create your account and receive matching jobs seekers profile automatically.</li>
+          <li>Verify your contact details and let candidates reach you.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
