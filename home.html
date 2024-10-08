@@ -735,7 +735,7 @@ input::placeholder {
   </section>
   
   <div class="warning-message">
-    <a href="">  <p>Above all services are only for website development. Click this message to view detailed plans about the 3 services we offer. Please note that all services include add-ons, which may incur additional charges, and all prices include GST.</p>
+    <a href="https://teju0051.github.io/Zen-Tech/pricing.html">  <p>Above all services are only for website development. Click this message to view detailed plans about the 3 services we offer. Please note that all services include add-ons, which may incur additional charges, and all prices include GST.</p>
 </div></a>
   
 
@@ -767,69 +767,6 @@ input::placeholder {
   </section>
 
  
- 
-  <form id="form"><br><br>
-    <h2>Get in Touch!</h2>
-    <div class="field">
-      <label for="name">Name of your organisation</label>
-      <input type="text" name="name" id="name" placeholder="John Doe" required>
-    </div>
-    <div class="field">
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="Johndoe@mail.com" required>
-    </div>
-    <div class="field">
-      <label for="businessType">Business Type</label>
-      <input type="text" name="businessType" id="businessType" placeholder="Business, Academy, Shop etc.." required>
-    </div>
-    <div class="field">
-      <label for="content">Content</label>
-      <input type="text" name="content" id="content" required placeholder="Briefly explain what you want in the website.">
-    </div>
-    <input type="submit" id="button" value="Send Email">
-  </form><br><br>
-      </div>
-</section>
-
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-    emailjs.init('yPSA5oIYwMA5AlGqm');
-</script>
-<script>
-  // Get the button element by its ID
-  const btn = document.getElementById('button');
-
-  // Add an event listener to the form for the submit event
-  document.getElementById('form').addEventListener('submit', function(event) {
-      // Prevent the default form submission behavior
-      event.preventDefault();
-  
-      // Change the button text to indicate that the form is being sent
-      btn.value = 'Sending...';
-  
-      // Define the service ID for email sending
-      const serviceID = 'default_service';
-      // Define the template ID for the email format
-      const templateID = 'template_vs60tf5';
-  
-      // Use EmailJS to send the form data
-      emailjs.sendForm(serviceID, templateID, this)
-          .then(() => {
-              // Reset the button text once the email is sent successfully
-              btn.value = 'Send Email';
-              // Show a success alert to the user
-              alert('Your request has been submitted. Our team will contact you shortly.');
-          }, (err) => {
-              // Reset the button text if there’s an error
-              btn.value = 'Send Email';
-              // Show an error alert with the error message
-              alert(JSON.stringify(err));
-          });
-  });
-</script>
-
-
 
 
   <footer>
