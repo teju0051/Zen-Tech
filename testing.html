@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming</title>
+    <style>
+      /* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header {
+  width: 100%;
+  text-align: center;
+  background-color: #fff; /* Optional: Add background color if needed */
+}
+
+.header-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+h1{
+  text-align: center;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .header-image {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-left: 4px solid #007bff;
+  white-space: pre-wrap; /* Allows line wrapping */
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+.highlight {
+ 
+  font-weight: bold;
+  border-left: 4px solid #ff0000
+}
+
+/* Red border only for the <pre> block with code */
+  .red-border {
+    border: 2px solid red;
+    padding: 15px;
+    background-color: #f4f4f4;
+    white-space: pre-wrap; /* Allows line wrapping */
+    overflow-x: auto;
+}
+
+ /* Popup Container */
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px); /* Adds background blur effect */
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+  z-index: 1; /* Ensure the popup content is above the background */
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-confirm {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-dev-access {
+  background-color: #008CBA;
+  color: white;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-code {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-back {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-submit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.ibb.co/w7wNzXs/ZENTECH-removebg-preview.png" alt="Zentech Logo" class="header-image">
+    </header>
+
+     <!-- Popup Structure -->
+     <div id="popup">
+      <div class="popup-content">
+          <h2>Tips</h2><br><br>
+          <p id="message">The code is currently undergoing final testing and is not fully released yet. We appreciate your patience, and it will be available as soon as the timer ends.</p>
+          <div id="timer"></div><br><br>
+          <div id="buttons">
+              <button class="btn btn-confirm" onclick="confirmAction()">Confirm</button>
+              <button class="btn btn-dev-access" onclick="devAccess()">Dev Access</button>
+          </div>
+
+          <!-- Input for Dev Access -->
+          <div id="dev-input" class="hidden">
+              <div class="input-container">
+                  <input type="text" id="access-code" class="input-code" placeholder="Enter Access Code to view code">
+              </div>
+              <button class="btn btn-back" onclick="backToMessage()">Back</button>
+              <button class="btn btn-submit" onclick="submitAccess()">Submit</button>
+          </div>
+      </div>
+  </div>
+
+<BR><BR>
+
+    <div class="container">
+      <h2>Code Review Confirmation and Assistance Information (Mandatory)</h2>
+      <pre class="red-border" style="font-size:larger">
+Hii Guys Tejas here,
+
+I am pleased to inform you that Zentech has thoroughly reviewed all the provided program codes, and they are free from errors. I've included comments in most of the programs to guide you on how each part of the code functions. However, for simpler programs, I have intentionally omitted comments, as i believe they are self-explanatory.
+
+If you encounter any difficulty understanding the code or executing it, i recommend you to take guidance from our teacher, as some programs involve more advanced programming concepts that you might not be familiar with yet.
+
+Feel free to run and experiment with the code. If you believe there is an error or discrepancy, kindly send your query along with a screenshot to our official email at: <a href="mailto:zentechindiaofficial@proton.me">zentechindiaofficial@proton.me</a>
+
+Best regards,
+Zen-Tech Operation Team
+
+
+      </pre>
+    </div>
+    <br><br>
+
+    <h1>Here are all the practical C Program source code</h1> <br><br>
+
+    <div class="container">
+      <h2>Practical: 1(b)</h2>
+      <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+  int num1, num2, num3, greatest;
+
+  // Input three numbers
+  printf("Enter three numbers: ");
+  scanf("%d %d %d", &num1, &num2, &num3);
+
+  // Using conditional operator to find the greatest number
+  greatest = (num1 > num2) ? ((num1 > num3) ? num1 : num3) : ((num2 > num3) ? num2 : num3);
+
+  // Display the greatest number
+  printf("The greatest number is: %d\n", greatest);
+
+  return 0;
+}
+      </code></pre>
+  </div> <br><br>
+
+
+  <div class="container">
+    <h2>Practical: 1(c)</h2>
+    <pre><code>
+      #include &lt;stdio.h&gt;
+
+        int main() {
+            int year;
+        
+        
+            printf("Enter a year: ");
+            scanf("%d", &year);
+        
+           
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                printf("%d is a leap year.\n", year);
+            } else {
+                printf("%d is not a leap year.\n", year);
+            }
+        
+            return 0;
+        }
+        
+        
+    </code></pre>
+</div><br><br>
+
+
+<div class="container">
+  <h2>Practical: 2(a)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;  // For sqrt() function
+
+int main() {
+    double a, b, c, discriminant, root1, root2, realPart, imaginaryPart;
+
+    // Input the coefficients a, b, and c
+    printf("Enter coefficients a, b, and c: ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    // Calculate the discriminant
+    discriminant = b * b - 4 * a * c;
+
+    // Check the nature of the discriminant and calculate the roots
+    if (discriminant > 0) {
+        // Two real and distinct roots
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+        printf("Roots are real and distinct: %.2lf and %.2lf\n", root1, root2);
+    } 
+    else if (discriminant == 0) {
+        // Two real and identical roots
+        root1 = -b / (2 * a);
+        printf("Roots are real and identical: %.2lf\n", root1);
+    } 
+    else {
+        // Complex (imaginary) roots
+        realPart = -b / (2 * a);
+        imaginaryPart = sqrt(-discriminant) / (2 * a);
+        printf("Roots are complex: %.2lf + %.2lfi and %.2lf - %.2lfi\n", 
+               realPart, imaginaryPart, realPart, imaginaryPart);
+    }
+
+    return 0;
+}
+
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 2(b)</h2>
+  <pre><code>#include &lt;stdio.h&gt;
+
+    int main() {
+        int choice;
+        float num1, num2, result;
+    
+        // Menu for operations
+        printf("Choose an operation to perform:\n");
+        printf("1. Addition (+)\n");
+        printf("2. Subtraction (-)\n");
+        printf("3. Multiplication (*)\n");
+        printf("4. Division (/)\n");
+        printf("Enter your choice (1-4): ");
+        scanf("%d", &choice);
+    
+        // Input the two numbers
+        printf("Enter two numbers: ");
+        scanf("%f %f", &num1, &num2);
+    
+        // Switch case to handle different operations
+        switch(choice) {
+            case 1:
+                result = num1 + num2;
+                printf("Result of %.2f + %.2f = %.2f\n", num1, num2, result);
+                break;
+            case 2:
+                result = num1 - num2;
+                printf("Result of %.2f - %.2f = %.2f\n", num1, num2, result);
+                break;
+            case 3:
+                result = num1 * num2;
+                printf("Result of %.2f * %.2f = %.2f\n", num1, num2, result);
+                break;
+            case 4:
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    printf("Result of %.2f / %.2f = %.2f\n", num1, num2, result);
+                } else {
+                    printf("Error: Division by zero is not allowed.\n");
+                }
+                break;
+            default:
+                printf("Invalid choice! Please choose between 1 and 4.\n");
+        }
+    
+        return 0;
+    }
+    
+  </code></pre>
+</div> <br><br>
+
+
+
+<div class="container">
+  <h2>Practical: 2(c)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+
+  int main() {
+      int rows;
+  
+      // Prompt the user for the number of rows
+      printf("Enter the number of rows: ");
+      scanf("%d", &rows);
+  
+      // Loop to create the pattern
+      for (int i = 1; i <= rows; i++) {
+          // Print asterisks for each row
+          for (int j = 1; j <= i; j++) {
+              printf("* ");
+          }
+          // Move to the next line after each row
+          printf("\n");
+      }
+  
+      return 0;
+  }
+  
+  
+
+  </code></pre>
+</div> <br><br>
+
+
+
+<div class="container">
+  <h2>Practical: 3(a)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+
+  int main() {
+      int number, reversedNumber = 0, remainder;
+  
+      // Prompt the user to enter a number
+      printf("Enter an integer: ");
+      scanf("%d", &number);
+  
+      // Using absolute value for reversing the digits
+      number = (number < 0) ? -number : number; // Make sure to reverse positive numbers
+  
+      // Reverse the number using a while loop
+      while (number != 0) {
+          remainder = number % 10;             // Get the last digit
+          reversedNumber = reversedNumber * 10 + remainder; // Build the reversed number
+          number /= 10;                        // Remove the last digit
+      }
+  
+      // Output the reversed number
+      printf("Reversed Number: %d\n", reversedNumber);
+  
+      return 0;
+  }
+  
+  
+
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 3(b)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+
+int main() {
+  int number;
+  unsigned long long factorial = 1; // Use unsigned long long to handle large results
+
+  // Prompt the user to enter a number
+  printf("Enter a positive integer: ");
+  scanf("%d", &number);
+
+  // Check if the input is a non-negative integer
+  if (number < 0) {
+      printf("Error! Factorial of a negative number doesn't exist.\n");
+  } else {
+      // Calculate factorial iteratively
+      for (int i = 1; i <= number; i++) {
+          factorial *= i; // Multiply factorial by i
+      }
+      printf("Factorial of %d = %llu\n", number, factorial); // Print the result
+  }
+
+  return 0;
+}
+
+  
+
+  </code></pre>
+</div> <br><br>
+
+<div class="container">
+  <h2>Practical: 3(c)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+// Function to print Fibonacci series recursively
+void fibonacci(int n, int firstTerm, int secondTerm) {
+    if (n > 0) {
+        printf("%d, ", firstTerm);
+        fibonacci(n - 1, secondTerm, firstTerm + secondTerm); // Recursive call
+    }
+}
+
+int main() {
+    int n;
+
+    // Prompt the user for the number of terms
+    printf("Enter the number of terms in Fibonacci series: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: \n");
+    fibonacci(n, 0, 1); // Start with 0 and 1
+
+    return 0;
+}
+
+  
+
+  </code></pre>
+</div> <br><br>
+
+<div class="container">
+  <h2>Practical: 4(a)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+// Function to calculate the area of a square
+float calculateArea(float side) {
+    return side * side; // Area = side^2
+}
+
+int main() {
+    float side, area;
+
+    // Prompt the user to enter the side length of the square
+    printf("Enter the side length of the square: ");
+    scanf("%f", &side);
+
+    // Calculate the area using the function
+    area = calculateArea(side);
+
+    // Print the area
+    printf("The area of the square with side %.2f is %.2f\n", side, area);
+
+    return 0;
+}
+
+
+
+  
+
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 4(b)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+// Recursive function to calculate factorial
+unsigned long long factorial(int n) {
+    if (n == 0 || n == 1) // Base case: 0! and 1! both equal 1
+        return 1;
+    else
+        return n * factorial(n - 1); // Recursive call
+}
+
+int main() {
+    int number;
+
+    // Prompt the user for a number
+    printf("Enter a positive integer: ");
+    scanf("%d", &number);
+
+    // Check if the input is a non-negative integer
+    if (number < 0) {
+        printf("Error! Factorial of a negative number doesn't exist.\n");
+    } else {
+        // Call the recursive function and print the result
+        printf("Factorial of %d = %llu\n", number, factorial(number));
+    }
+
+    return 0;
+}
+
+
+  
+
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 4(c)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+  // Function to calculate the absolute value
+  double absoluteValue(double num) {
+      return (num < 0) ? -num : num; // Return the positive value
+  }
+  
+  // Function to calculate the square root
+  double calculateSquareRoot(double num) {
+      return sqrt(num); // Use the sqrt function from math.h
+  }
+  
+  int main() {
+      double number, absValue, sqrtValue;
+  
+      // Prompt the user to enter a number
+      printf("Enter a number: ");
+      scanf("%lf", &number);
+  
+      // Calculate absolute value
+      absValue = absoluteValue(number);
+      
+      // Calculate square root of the absolute value
+      sqrtValue = calculateSquareRoot(absValue);
+      
+      // Print the results
+      printf("Absolute value of %.2lf = %.2lf\n", number, absValue);
+      printf("Square root of the absolute value = %.2lf\n", sqrtValue);
+  
+      return 0;
+  }
+  
+  
+
+  </code></pre>
+</div> <br><br>
+
+
+
+<div class="container">
+  <h2>Practical: 4(d)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+  int number, sum = 0;
+
+  printf("Enter numbers to sum (negative number to stop):\n");
+
+  start: // Label for goto
+  scanf("%d", &number); // Read a number from user
+
+  if (number < 0) {
+      goto end; // Jump to end if number is negative
+  }
+
+  sum += number; // Add number to sum
+  goto start; // Jump back to start to get the next number
+
+  end: // Label for end
+  printf("The total sum is: %d\n", sum); // Print the total sum
+  return 0;
+}
+
+
+  
+
+  </code></pre>
+</div> <br><br>
+
+
+
+<div class="container">
+  <h2>Practical: 5(a)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+#define MAX_STUDENTS 10 // Define the maximum number of students
+
+int main() {
+    int rollNumbers[MAX_STUDENTS]; // Array to store roll numbers
+    char studentNames[MAX_STUDENTS][50]; // Array to store student names
+
+    // Input roll numbers and names for each student
+    for (int i = 0; i < MAX_STUDENTS; i++) {
+        printf("Enter roll number for student %d: ", i + 1);
+        scanf("%d", &rollNumbers[i]);
+        printf("Enter name for student %d: ", i + 1);
+        scanf(" %[^\n]%*c", studentNames[i]); // Read string with spaces
+    }
+
+    // Print roll numbers and names of all students
+    printf("\nRoll Number and Student Names:\n");
+    printf("---------------------------------------------------\n");
+    for (int i = 0; i < MAX_STUDENTS; i++) {
+        printf("Roll Number: %d, Name: %s\n", rollNumbers[i], studentNames[i]);
+    }
+
+    return 0;
+}
+
+
+
+  
+
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 5(b)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+void bubbleSort(int arr[], int n, int ascending) {
+  for (int i = 0; i < n - 1; i++) {
+      for (int j = 0; j < n - i - 1; j++) {
+          // Swap based on the order selected
+          if ((ascending && arr[j] > arr[j + 1]) || (!ascending && arr[j] < arr[j + 1])) {
+              // Swap arr[j] and arr[j+1]
+              int temp = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = temp;
+          }
+      }
+  }
+}
+
+void printArray(int arr[], int n) {
+  for (int i = 0; i < n; i++) {
+      printf("%d ", arr[i]);
+  }
+  printf("\n");
+}
+
+int main() {
+  int n;
+
+  // Input number of elements in the array
+  printf("Enter the number of elements: ");
+  scanf("%d", &n);
+
+  int arr[n]; // Declare array of size n
+
+  // Input elements into the array
+  printf("Enter %d elements:\n", n);
+  for (int i = 0; i < n; i++) {
+      scanf("%d", &arr[i]);
+  }
+
+  int choice;
+  printf("Sort in (1) Ascending or (2) Descending order? Enter 1 or 2: ");
+  scanf("%d", &choice);
+
+  // Perform sorting based on user choice
+  if (choice == 1) {
+      bubbleSort(arr, n, 1); // Ascending
+      printf("Sorted array in ascending order:\n");
+  } else if (choice == 2) {
+      bubbleSort(arr, n, 0); // Descending
+      printf("Sorted array in descending order:\n");
+  } else {
+      printf("Invalid choice!\n");
+      return 1; // Exit with an error
+  }
+
+  // Print the sorted array
+  printArray(arr, n);
+  return 0;
+}
+
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 6(a)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+  void extractSubstring(char *source, int start, int length, char *destination) {
+      // Copy the specified portion to destination
+      strncpy(destination, source + start, length);
+      destination[length] = '\0'; // Null-terminate the destination string
+  }
+  
+  int main() {
+      char str[100], substring[100];
+      int start, length;
+  
+      // Input the original string
+      printf("Enter a string: ");
+      fgets(str, sizeof(str), stdin); // Read a string with spaces
+      str[strcspn(str, "\n")] = '\0'; // Remove the newline character if present
+  
+      // Input start index and length
+      printf("Enter start index for extraction: ");
+      scanf("%d", &start);
+      printf("Enter length of substring: ");
+      scanf("%d", &length);
+  
+      // Validate start index and length
+      if (start < 0 || start >= strlen(str) || length < 0 || start + length > strlen(str)) {
+          printf("Invalid start index or length!\n");
+          return 1; // Exit with an error
+      }
+  
+      // Extract the substring
+      extractSubstring(str, start, length, substring);
+      
+      // Print the extracted substring
+      printf("Extracted substring: '%s'\n", substring);
+  
+      return 0;
+  }
+  
+  </code></pre>
+</div> <br><br>
+
+
+
+<div class="container">
+  <h2>Practical: 6(b)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+  #include &lt;ctype.h&gt;
+  
+  #define MAX_LENGTH 100
+  
+  // Function to check if a string is a palindrome
+  int isPalindrome(char str[]) {
+      int left = 0;
+      int right = strlen(str) - 1;
+  
+      while (left < right) {
+          // Ignore non-alphanumeric characters and case
+          while (left < right && !isalnum(str[left])) left++;
+          while (left < right && !isalnum(str[right])) right--;
+  
+          // Compare characters
+          if (tolower(str[left]) != tolower(str[right])) {
+              return 0; // Not a palindrome
+          }
+          left++;
+          right--;
+      }
+      return 1; // Is a palindrome
+  }
+  
+  int main() {
+      char str[MAX_LENGTH];
+  
+      // Input the string
+      printf("Enter a string: ");
+      fgets(str, sizeof(str), stdin);
+      str[strcspn(str, "\n")] = '\0'; // Remove the newline character if present
+  
+      // Check if the string is a palindrome
+      if (isPalindrome(str)) {
+          printf("'%s' is a palindrome.\n", str);
+      } else {
+          printf("'%s' is not a palindrome.\n", str);
+      }
+  
+      return 0;
+  }
+  
+  
+  </code></pre>
+</div> <br><br>
+
+
+
+<div class="container">
+  <h2>Practical: 6(c)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+// Function to get the length of a string
+void printStringLength(char str[]) {
+    printf("Length of the string '%s' is: %lu\n", str, strlen(str));
+}
+
+// Function to compare two strings
+void compareStrings(char str1[], char str2[]) {
+    int result = strcmp(str1, str2);
+    if (result == 0) {
+        printf("The strings '%s' and '%s' are equal.\n", str1, str2);
+    } else if (result < 0) {
+        printf("The string '%s' is less than '%s'.\n", str1, str2);
+    } else {
+        printf("The string '%s' is greater than '%s'.\n", str1, str2);
+    }
+}
+
+int main() {
+    char str1[100], str2[100];
+
+    // Input first string
+    printf("Enter the first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    str1[strcspn(str1, "\n")] = '\0'; // Remove the newline character if present
+
+    // Input second string
+    printf("Enter the second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    str2[strcspn(str2, "\n")] = '\0'; // Remove the newline character if present
+
+    // Print the length of both strings
+    printStringLength(str1);
+    printStringLength(str2);
+
+    // Compare the two strings
+    compareStrings(str1, str2);
+
+    return 0;
+}
+ 
+
+  
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 7</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+// Function to swap two numbers using call-by-value
+void swapByValue(int a, int b) {
+    int temp;
+    temp = a; 
+    a = b; 
+    b = temp; 
+    printf("Inside swapByValue: a = %d, b = %d\n", a, b);
+}
+
+// Function to swap two numbers using call-by-reference
+void swapByReference(int *a, int *b) {
+    int temp;
+    temp = *a; 
+    *a = *b; 
+    *b = temp; 
+    printf("Inside swapByReference: *a = %d, *b = %d\n", *a, *b);
+}
+
+int main() {
+    int x, y;
+
+    // Input two numbers
+    printf("Enter two numbers (x and y): ");
+    scanf("%d %d", &x, &y);
+
+    // Call swapByValue
+    printf("Before swapByValue: x = %d, y = %d\n", x, y);
+    swapByValue(x, y); // Call-by-value
+    printf("After swapByValue: x = %d, y = %d (no change)\n\n", x, y);
+
+    // Call swapByReference
+    printf("Before swapByReference: x = %d, y = %d\n", x, y);
+    swapByReference(&x, &y); // Call-by-reference
+    printf("After swapByReference: x = %d, y = %d (values swapped)\n", x, y);
+
+    return 0;
+}
+
+
+
+
+  
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 8(a)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+  int m, n;
+
+  // Input the number of rows and columns
+  printf("Enter the number of rows (M): ");
+  scanf("%d", &m);
+  printf("Enter the number of columns (N): ");
+  scanf("%d", &n);
+
+  // Declare a matrix of size M x N
+  int matrix[m][n];
+
+  // Input the elements of the matrix
+  printf("Enter the elements of the matrix:\n");
+  for (int i = 0; i < m; i++) {
+      for (int j = 0; j < n; j++) {
+          printf("Element [%d][%d]: ", i, j);
+          scanf("%d", &matrix[i][j]);
+      }
+  }
+
+  // Display the matrix
+  printf("\nThe matrix is:\n");
+  for (int i = 0; i < m; i++) {
+      for (int j = 0; j < n; j++) {
+          printf("%d ", matrix[i][j]);
+      }
+      printf("\n");
+  }
+
+  return 0;
+}
+
+
+
+
+
+  
+  </code></pre>
+</div> <br><br>
+
+
+
+
+<div class="container">
+  <h2>Practical: 8(b)</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#define MAX 10 // Define maximum size for the matrices
+
+// Function to multiply two matrices
+void multiplyMatrices(int first[MAX][MAX], int second[MAX][MAX], int result[MAX][MAX], int r1, int c1, int r2, int c2) {
+    // Initialize result matrix to 0
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            result[i][j] = 0;
+        }
+    }
+
+    // Perform matrix multiplication
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            for (int k = 0; k < c1; k++) {
+                result[i][j] += first[i][k] * second[k][j];
+            }
+        }
+    }
+}
+
+int main() {
+    int first[MAX][MAX], second[MAX][MAX], result[MAX][MAX];
+    int r1, c1, r2, c2;
+
+    // Input dimensions and elements of the first matrix
+    printf("Enter rows and columns for the first matrix (r1 c1): ");
+    scanf("%d %d", &r1, &c1);
+    printf("Enter elements of the first matrix:\n");
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c1; j++) {
+            printf("Element [%d][%d]: ", i, j);
+            scanf("%d", &first[i][j]);
+        }
+    }
+
+    // Input dimensions and elements of the second matrix
+    printf("Enter rows and columns for the second matrix (r2 c2): ");
+    scanf("%d %d", &r2, &c2);
+    if (c1 != r2) {
+        printf("Matrix multiplication is not possible. The number of columns in the first matrix must equal the number of rows in the second matrix.\n");
+        return 1; // Exit if multiplication is not possible
+    }
+    printf("Enter elements of the second matrix:\n");
+    for (int i = 0; i < r2; i++) {
+        for (int j = 0; j < c2; j++) {
+            printf("Element [%d][%d]: ", i, j);
+            scanf("%d", &second[i][j]);
+        }
+    }
+
+    // Call the function to multiply the matrices
+    multiplyMatrices(first, second, result, r1, c1, r2, c2);
+
+    // Display the result
+    printf("\nThe resultant matrix after multiplication is:\n");
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+ 
+  </code></pre>
+</div> <br><br>
+
+
+<div class="container">
+  <h2>Practical: 9</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+// Define a structure to hold book details
+struct Book {
+    char title[50];
+    char author[50];
+    char subject[50];
+    int bookID;
+};
+
+// Function to input book details
+void inputBookDetails(struct Book *b) {
+    printf("Enter title: ");
+    getchar(); // To consume the newline character left by previous input
+    fgets(b->title, sizeof(b->title), stdin);
+
+    printf("Enter author: ");
+    fgets(b->author, sizeof(b->author), stdin);
+
+    printf("Enter subject: ");
+    fgets(b->subject, sizeof(b->subject), stdin);
+
+    printf("Enter book ID: ");
+    scanf("%d", &b->bookID);
+}
+
+// Function to display book details
+void displayBookDetails(struct Book b) {
+    printf("\nBook Details:\n");
+    printf("Title: %s", b.title);
+    printf("Author: %s", b.author);
+    printf("Subject: %s", b.subject);
+    printf("Book ID: %d\n", b.bookID);
+}
+
+int main() {
+    struct Book books[2]; // Array to hold details of two books
+
+    // Input details for two books
+    for (int i = 0; i < 2; i++) {
+        printf("Enter details for Book %d:\n", i + 1);
+        inputBookDetails(&books[i]);
+    }
+
+    // Display details of the books
+    for (int i = 0; i < 2; i++) {
+        displayBookDetails(books[i]);
+    }
+
+    return 0;
+}
+
+
+
+ 
+  </code></pre>
+</div> <br><br>
+
+
+
+<div class="container">
+  <h2>Practical: 10</h2>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+  #include &lt;string.h&gt;
+  
+  #define MAX_ACCOUNTS 100
+  
+  // Structure to hold account details
+  struct Account {
+      int accountNumber;
+      char name[50];
+      float balance;
+  };
+  
+  // Function prototypes
+  void createAccount(struct Account accounts[], int *count);
+  void viewAccount(struct Account accounts[], int count);
+  void depositMoney(struct Account accounts[], int count);
+  void withdrawMoney(struct Account accounts[], int count);
+  void displayMenu();
+  
+  int main() {
+      struct Account accounts[MAX_ACCOUNTS];
+      int accountCount = 0;
+      int choice;
+  
+      do {
+          displayMenu();
+          printf("Enter your choice: ");
+          scanf("%d", &choice);
+  
+          switch (choice) {
+              case 1:
+                  createAccount(accounts, &accountCount);
+                  break;
+              case 2:
+                  viewAccount(accounts, accountCount);
+                  break;
+              case 3:
+                  depositMoney(accounts, accountCount);
+                  break;
+              case 4:
+                  withdrawMoney(accounts, accountCount);
+                  break;
+              case 5:
+                  printf("Exiting the program...\n");
+                  break;
+              default:
+                  printf("Invalid choice! Please try again.\n");
+          }
+      } while (choice != 5);
+  
+      return 0;
+  }
+  
+  // Function to display the menu
+  void displayMenu() {
+      printf("\n----- Bank Management System -----\n");
+      printf("1. Create Account\n");
+      printf("2. View Account Details\n");
+      printf("3. Deposit Money\n");
+      printf("4. Withdraw Money\n");
+      printf("5. Exit\n");
+  }
+  
+  // Function to create a new account
+  void createAccount(struct Account accounts[], int *count) {
+      if (*count >= MAX_ACCOUNTS) {
+          printf("Cannot create more accounts. Maximum limit reached.\n");
+          return;
+      }
+  
+      struct Account newAccount;
+      newAccount.accountNumber = *count + 1; // Assign account number
+      printf("Enter your name: ");
+      getchar(); // Consume newline character left by previous input
+      fgets(newAccount.name, sizeof(newAccount.name), stdin);
+      newAccount.name[strcspn(newAccount.name, "\n")] = '\0'; // Remove newline
+      newAccount.balance = 0.0;
+  
+      accounts[*count] = newAccount;
+      (*count)++;
+      printf("Account created successfully! Your account number is %d.\n", newAccount.accountNumber);
+  }
+  
+  // Function to view account details
+  void viewAccount(struct Account accounts[], int count) {
+      int accountNumber;
+      printf("Enter your account number: ");
+      scanf("%d", &accountNumber);
+  
+      if (accountNumber > 0 && accountNumber <= count) {
+          struct Account acc = accounts[accountNumber - 1];
+          printf("\nAccount Number: %d\n", acc.accountNumber);
+          printf("Name: %s\n", acc.name);
+          printf("Balance: %.2f\n", acc.balance);
+      } else {
+          printf("Invalid account number!\n");
+      }
+  }
+  
+  // Function to deposit money
+  void depositMoney(struct Account accounts[], int count) {
+      int accountNumber;
+      float amount;
+      printf("Enter your account number: ");
+      scanf("%d", &accountNumber);
+  
+      if (accountNumber > 0 && accountNumber <= count) {
+          printf("Enter amount to deposit: ");
+          scanf("%f", &amount);
+          if (amount > 0) {
+              accounts[accountNumber - 1].balance += amount;
+              printf("Amount deposited successfully! New balance: %.2f\n", accounts[accountNumber - 1].balance);
+          } else {
+              printf("Invalid amount!\n");
+          }
+      } else {
+          printf("Invalid account number!\n");
+      }
+  }
+  
+  // Function to withdraw money
+  void withdrawMoney(struct Account accounts[], int count) {
+      int accountNumber;
+      float amount;
+      printf("Enter your account number: ");
+      scanf("%d", &accountNumber);
+  
+      if (accountNumber > 0 && accountNumber <= count) {
+          printf("Enter amount to withdraw: ");
+          scanf("%f", &amount);
+          if (amount > 0 && amount <= accounts[accountNumber - 1].balance) {
+              accounts[accountNumber - 1].balance -= amount;
+              printf("Amount withdrawn successfully! New balance: %.2f\n", accounts[accountNumber - 1].balance);
+          } else {
+              printf("Invalid amount or insufficient balance!\n");
+          }
+      } else {
+          printf("Invalid account number!\n");
+      }
+  }
+  
+
+ 
+  </code></pre>
+</div> <br><br>
+
+<script>
+const _0x3ac29d=_0x3d15;function _0x3d15(_0xefe5cd,_0x4c696e){const _0x55cfdf=_0x55cf();return _0x3d15=function(_0x3d15f4,_0x1ab509){_0x3d15f4=_0x3d15f4-0xcc;let _0x1083cc=_0x55cfdf[_0x3d15f4];return _0x1083cc;},_0x3d15(_0xefe5cd,_0x4c696e);}(function(_0x537395,_0x398933){const _0x365677=_0x3d15,_0x56ccce=_0x537395();while(!![]){try{const _0x8e18d5=parseInt(_0x365677(0xe1))/0x1+parseInt(_0x365677(0xd1))/0x2+-parseInt(_0x365677(0xe9))/0x3+parseInt(_0x365677(0xcd))/0x4*(parseInt(_0x365677(0xce))/0x5)+-parseInt(_0x365677(0xd3))/0x6*(-parseInt(_0x365677(0xd6))/0x7)+-parseInt(_0x365677(0xe4))/0x8*(parseInt(_0x365677(0xdb))/0x9)+parseInt(_0x365677(0xe2))/0xa*(parseInt(_0x365677(0xd4))/0xb);if(_0x8e18d5===_0x398933)break;else _0x56ccce['push'](_0x56ccce['shift']());}catch(_0x9ff80d){_0x56ccce['push'](_0x56ccce['shift']());}}}(_0x55cf,0x3228e));const releaseDate=new Date(_0x3ac29d(0xec))[_0x3ac29d(0xe8)](),popup=document[_0x3ac29d(0xea)]('popup'),message=document[_0x3ac29d(0xea)](_0x3ac29d(0xeb)),timer=document[_0x3ac29d(0xea)](_0x3ac29d(0xdc)),buttons=document['getElementById']('buttons'),devInput=document['getElementById'](_0x3ac29d(0xef));function showPopup(){const _0x4809ed=_0x3ac29d;popup[_0x4809ed(0xf0)][_0x4809ed(0xda)]=_0x4809ed(0xde),updateTimer();}function updateTimer(){const _0x196ccc=_0x3ac29d,_0x248631=new Date()[_0x196ccc(0xe8)](),_0x1e984b=releaseDate-_0x248631;if(_0x1e984b>0x0){const _0x3ee71d=Math[_0x196ccc(0xd2)](_0x1e984b/(0x3e8*0x3c*0x3c*0x18)),_0x1b4e4c=Math[_0x196ccc(0xd2)](_0x1e984b%(0x3e8*0x3c*0x3c*0x18)/(0x3e8*0x3c*0x3c)),_0x353ea8=Math[_0x196ccc(0xd2)](_0x1e984b%(0x3e8*0x3c*0x3c)/(0x3e8*0x3c)),_0x493316=Math[_0x196ccc(0xd2)](_0x1e984b%(0x3e8*0x3c)/0x3e8);timer[_0x196ccc(0xd8)]=_0x196ccc(0xe6)+_0x3ee71d+'d\x20'+_0x1b4e4c+'h\x20'+_0x353ea8+'m\x20'+_0x493316+'s',setTimeout(updateTimer,0x3e8);}else timer[_0x196ccc(0xd8)]=_0x196ccc(0xd5),setTimeout(()=>{const _0xa8b8e9=_0x196ccc;popup['style'][_0xa8b8e9(0xda)]='none';},0xbb8);}function confirmAction(){const _0x3e9991=_0x3ac29d;window[_0x3e9991(0xe3)][_0x3e9991(0xe5)]=_0x3e9991(0xd0);}function devAccess(){const _0x34a999=_0x3ac29d;message[_0x34a999(0xf0)]['display']=_0x34a999(0xe7),buttons[_0x34a999(0xf0)][_0x34a999(0xda)]=_0x34a999(0xe7),devInput['classList'][_0x34a999(0xd7)](_0x34a999(0xdd));}function backToMessage(){const _0x2c0e84=_0x3ac29d;message[_0x2c0e84(0xf0)][_0x2c0e84(0xda)]=_0x2c0e84(0xee),buttons['style'][_0x2c0e84(0xda)]='block',devInput[_0x2c0e84(0xdf)][_0x2c0e84(0xe0)](_0x2c0e84(0xdd));}function _0x55cf(){const _0x2a8e94=['message','2024-10-19T18:00:00','Incorrect\x20Access\x20Code','block','dev-input','style','#8GJGPJYQ2','584GrHyYY','2630PeZyJF','onload','new-page.html','75272vbutTl','floor','7152EisRPe','799777vMJGGW','The\x20code\x20is\x20now\x20available!','2247enfSwn','remove','innerHTML','value','display','61767rndexi','timer','hidden','flex','classList','add','289394TGpywl','20hQctni','location','400wSQKrB','href','Time\x20until\x20release:\x20','none','getTime','1149804eVNWdf','getElementById'];_0x55cf=function(){return _0x2a8e94;};return _0x55cf();}function submitAccess(){const _0x1cf892=_0x3ac29d,_0x100da2=document[_0x1cf892(0xea)]('access-code')[_0x1cf892(0xd9)];_0x100da2===_0x1cf892(0xcc)?popup['style']['display']='none':alert(_0x1cf892(0xed));}window[_0x3ac29d(0xcf)]=function(){showPopup();};
+</script>
+
+<script>
+  var _0x5eb563=_0x3068;function _0x3068(_0x335d16,_0x36f60c){var _0x45e7de=_0x45e7();return _0x3068=function(_0x30687f,_0x23a579){_0x30687f=_0x30687f-0x10d;var _0x30ae2b=_0x45e7de[_0x30687f];return _0x30ae2b;},_0x3068(_0x335d16,_0x36f60c);}(function(_0x17228a,_0x52f93a){var _0x14509b=_0x3068,_0x23e280=_0x17228a();while(!![]){try{var _0x380162=-parseInt(_0x14509b(0x114))/0x1+parseInt(_0x14509b(0x119))/0x2+-parseInt(_0x14509b(0x111))/0x3+-parseInt(_0x14509b(0x116))/0x4*(parseInt(_0x14509b(0x112))/0x5)+-parseInt(_0x14509b(0x10d))/0x6+-parseInt(_0x14509b(0x11a))/0x7+parseInt(_0x14509b(0x10e))/0x8;if(_0x380162===_0x52f93a)break;else _0x23e280['push'](_0x23e280['shift']());}catch(_0x5392ac){_0x23e280['push'](_0x23e280['shift']());}}}(_0x45e7,0x1d5b6));function _0x45e7(){var _0x2e2891=['124974TvJwYF','4697184TIhfOm','keydown','You\x20are\x20not\x20allowed\x20to\x20view\x20source\x20code\x20because\x20it\x20is\x20copyiright\x20reserved\x20by\x20Zen-Tech.\x20If\x20you\x20broke\x20the\x20rule\x20the\x20actions\x20will\x20be\x20taken\x20against\x20you.','180777bilCLa','5tBgpPJ','key','134574GxGnTi','preventDefault','628832RGzfkI','F12','addEventListener','98086kNDYso','1001525GDVDJw','ctrlKey'];_0x45e7=function(){return _0x2e2891;};return _0x45e7();}function alertUser(){var _0x15d453=_0x3068;alert(_0x15d453(0x110));}document[_0x5eb563(0x118)](_0x5eb563(0x10f),function(_0x30e9be){var _0x14a3da=_0x5eb563;(_0x30e9be[_0x14a3da(0x11b)]&&_0x30e9be['shiftKey']&&_0x30e9be[_0x14a3da(0x113)]==='I'||_0x30e9be[_0x14a3da(0x113)]===_0x14a3da(0x117))&&(_0x30e9be[_0x14a3da(0x115)](),alertUser());}),document['addEventListener']('contextmenu',function(_0x59d869){var _0x114e1f=_0x5eb563;_0x59d869[_0x114e1f(0x115)](),alertUser();});
+</script>
+</body>
+</html>
