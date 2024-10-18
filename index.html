@@ -7,14 +7,12 @@
   <meta name="description" content="ZenTech provides affordable website and app development services for small and medium businesses. Partner with us for high-quality custom solutions.">
   <meta name="keywords" content="website development, app development, software solutions, ZenTech, small business services">
   
-
   <meta property="og:title" content="ZenTech - Affordable Development Solutions">
   <meta property="og:description" content="Specializing in website and app development for small and medium businesses.">
   <meta property="og:image" content="https://teju0051.github.io/Zen-Tech/favicon.ico">
   <meta property="og:url" content="https://zen-tech.vercel.app/">
   <meta property="og:type" content="website">
-
-
+  
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ZenTech - Affordable Development Solutions">
   <meta name="twitter:description" content="Specializing in website and app development for small and medium businesses.">
@@ -22,12 +20,8 @@
 
   <link rel="icon" type="image/x-icon" href="https://teju0051.github.io/Zen-Tech/favicon.ico">
   
-
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 
   <link rel="canonical" href="https://zen-tech.vercel.app/">
 
@@ -46,38 +40,46 @@
     ]
   }
   </script>
-<link rel="stylesheet" href="styles.css">
-  </head>
+<script src="scritps.js"></script>
+</head>
 <body>
 
   <header>
     <div class="container">
       <div class="logo">
-        <h5> <i class="fas fa-envelope"></i>
-          <a href="mailto:zentechindiaofficial@proton.me">zentechindiaofficial@proton.me</a></h5> 
+        <h5><i class="fas fa-envelope"></i>
+          <a href="mailto:zentechindiaofficial@proton.me">zentechindiaofficial@proton.me</a></h5>
       </div>
     
       <nav>
-        <ul class="nav-links">
-           <li><a href="https://zen-tech.vercel.app/">Home</a></li>
+        <button class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="https://zen-tech.vercel.app/">Home</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="dropdown" id="dropdown-menu">
+          <a href="https://zen-tech.vercel.app/">Home</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="#about">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </nav>
       
     </div>
     
   </header>
 
-
   <section class="hero">
     <div class="hero-content"><br><br><br><br><br><br><br><br><br><br><br>
-     
       <a href="contact.html">Get your Quote! <i class="fas fa-chevron-right"></i></a>
     </div>
   </section>
-
 
   <section id="services" class="services">
     <div class="container">
@@ -103,108 +105,76 @@
     </div>
   </section>
 
- 
-<section id="new-feature" class="new-feature">
-    <div class="container">
-      <h2>Freedom Choice</h2>
-      <div class="feature-content">
-      
-        <div class="feature-left">
-            <i class="fas fa-users"></i> 
-          <h3>Code with your Team</h3>
-          <p>Empower your team with the tools and resources  including our AI powered tools to develop your own business requirements.</p>
-          <a href="contact.html" class="feature-button">Request a Quote</a>
-        </div>
-        
-       
-        <div class="vertical-line"></div>
-        
-       
-        <div class="feature-right">
-          <i class="fas fa-handshake"></i> 
-          <h3>Leave It to Us</h3>
-          <p>Let our expert team handle your development projects with professionalism and excellence.</p>
-          <a href="contact.html" class="feature-button">Request a Quote</a>
-          
-    
-        </div>
-        
-  </section>
-  <section id="our-plans" class="our-plans">
-    <div class="container">
-      <h2>Our Plans</h2>
-      <div class="pricing">
-        <div class="plan-container">
-          <div class="plan">
-            <h3>Basic</h3>
-            <p>Price: <strong>₹46000</strong>/year</p>
-            OR
-            <p>Price: <strong>₹3,900</strong>/month</p>
-            <pre>Recommended for portfolio, Personal Use</pre><br><br>
-            <p>What you'll get:</p>
-            <ul>
-              <li>✓ Basic website design</li>
-              <li>✓ Responsive layout</li>
-              <li>✓ 24/7 Support</li>
-              <li>✓ Maintainance Page</li>
-              <li>✓ 2-5 pages</li>
-            </ul>
-          </div>
-        </div>
-        <div class="vertical-line"></div> 
-        <div class="plan-container">
-          <div class="plan">
-            <h3>Advanced</h3>
-            <p>Price: <strong>₹105,000</strong>/year</p>
-            OR
-            <p>Price: <strong>₹8,800</strong>/month</p>
-            <pre>Recommended for School, Colleges, Academy, Shop</pre><br><br>
-            <p>What you'll get:</p>
-            <ul>
-              <li>✓ Includes all basic plan features</li>
-              <li>✓ SEO optimization</li>
-              <li>✓ Business Email</li>
-              <li>✓ Contact Form Integration</li>
-              <li>✓ Mobile-friendly design</li>
-              <li>✓ Custom domain name</li>
-              <li>✓ Max 10 Pages</li>
-            </ul>
-          </div>
-        </div>
-        <div class="vertical-line"></div> 
-        <div class="plan-container">
-          <div class="plan">
-            <h3>Organizations</h3>
-            <p>Price: <strong>₹2,43,600</strong>/year</p>
-            OR
-            <p>Price: <strong>₹20,300</strong>/month</p>
-            <pre>Recommended for E-Commerce, World-wide Connections.</pre><br><br>
-            <p>What you'll get:</p>
-            <ul>
-              <li>✓ Includes all Advanced website features</li>
-              <li>✓ Performance optimization</li>
-              <li>✓ Integrated payment gateway</li>
-              <li>✓ AI Powered SEO Optimization.</li>
-              <li>✓ E-Commerce</li>
-              <li>✓ Dedicated account manager</li>
-              <li>✓ Anti-Hack Domain</li>
-              <li>✓ Max 15 Pages</li>
-             
-            </ul>
-          </div>
 
+  <!--Our Plan Section-->
+<section id="our-plans" class="our-plans">
+  <div class="container">
+    <h2>Our Plans</h2>
+    <div class="pricing">
+      <!-- Website Plan -->
+      <div class="plan-container">
+        <div class="plan">
+          <h3>Website</h3>
+          <p>Price: <strong>₹3,900 - ₹2,43,600</strong></p><br>
+          <p>What you'll get:</p>
+          <ul>
+            <li>✓ Basic website design</li>
+            <li>✓ Responsive layout</li>
+            <li>✓ 24/7 Support</li>
+            <li>✓ Maintenance Page</li>
+            <li>And many more..</li>
+          </ul>
+          <!-- Explore More Button -->
+          <a href="pricing.html" class="explore-button">Explore More</a>
+        </div>
+      </div>
 
+      <div class="vertical-line"></div>
+
+      <!-- Custom Software Plan -->
+      <div class="plan-container">
+        <div class="plan">
+          <h3>Custom Software</h3>
+          <p>Price: <strong>₹7,083 - ₹7,00,000</strong></p><br>
+          <p>What you'll get:</p>
+          <ul>
+            <li>✓ SEO optimization</li>
+            <li>✓ Business Email</li>
+            <li>✓ Contact Form Integration</li>
+            <li>✓ Mobile-friendly design</li>
+            <li>And many more..</li>
+          </ul>
+          <!-- Explore More Button -->
+          <a href="pricing.html" class="explore-button">Explore More</a>
+        </div>
+      </div>
+
+      <div class="vertical-line"></div>
+
+      <!-- Mobile App Plan -->
+      <div class="plan-container">
+        <div class="plan">
+          <h3>Mobile App</h3>
+          <p>Price: <strong>₹2,916 - ₹74,999</strong></p><br>
+          <p>What you'll get:</p>
+          <ul>
+            <li>✓ Cross-platform development</li>
+            <li>✓ Basic user interface</li>
+            <li>✓ Up to 5 screens</li>
+            <li>✓ Push notifications</li>
+            <li>And many more..</li>
+          </ul>
+          <!-- Explore More Button -->
+          <a href="pricing.html" class="explore-button">Explore More</a>
         </div>
       </div>
     </div>
-  </section>
-  
-  <div class="warning-message">
-    <a href="pricing.html">  <p>Above all services are only for website development. Click this message to view detailed plans about the 3 services we offer. Please note that all services include add-ons, which may incur additional charges, and all prices include GST.</p>
-</div></a>
-  
+  </div>
+</section>
 
 
+
+  <!--About us Section-->
 
   <section id="about" class="about">
     <div class="container">
@@ -231,14 +201,81 @@
     </div>
   </section>
 
- 
+  
+<!-- Testimonial -->
+<div class="our-testimonials">
+  <h2>Our Testimonials</h2>
+  <div class="testimonial-container">
+      <div class="testimonial-item">
+          <img src="file:///C:/Users/ADMIN/Videos/Captures/Presentor's%20Choice%20and%205%20more%20pages%20-%20Person%201%20-%20Microsoft%E2%80%8B%20Edge%20Beta%2010_17_2024%209_18_40%20PM.png" alt="Website Testimonial" class="testimonial-image">
+       
+      </div>
+      <div class="testimonial-item">
+          <img src="file:///C:/Users/ADMIN/Videos/Captures/Presentor's%20Choice%20and%205%20more%20pages%20-%20Person%201%20-%20Microsoft%E2%80%8B%20Edge%20Beta%2010_17_2024%209_15_25%20PM.png" alt="Software Testimonial" class="testimonial-image">
+       
+      </div>
+      <div class="testimonial-item">
+          <img src="file:///C:/Users/ADMIN/Videos/Captures/New%20tab%20and%205%20more%20pages%20-%20Person%201%20-%20Microsoft%E2%80%8B%20Edge%20Beta%2010_17_2024%209_21_04%20PM.png" alt="Other Testimonial" class="testimonial-image">
+        
+      </div>
+  </div>
+</div>
+
+
+<!-- FAQ Section -->
+<div class="our-faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+      <div class="faq-item">
+          <div class="faq-question">
+              <h3>What services do you offer?</h3>
+              <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+              <p>We offer web development, software solutions, and mobile app development to your needs.</p>
+          </div>
+      </div>
+      <div class="faq-item">
+          <div class="faq-question">
+              <h3>How can I contact customer support?</h3>
+              <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+              <p>You can contact customer support via mail zentechindiaofficial@proton.me and/or our contact section.</p>
+          </div>
+      </div>
+      <div class="faq-item">
+          <div class="faq-question">
+              <h3>What is your refund policy?</h3>
+              <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+              <p>No refund policy: Once payment is made, it will not be refunded under any circumstances.</p>
+          </div>
+      </div>
+      <div class="faq-item">
+          <div class="faq-question">
+              <h3>Do you offer support after project completion?</h3>
+              <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+              <p>Yes, we do provide maintenance services for 1 year free. After that, a minimum charge will be applied (valid only for yearly subscription).</p>
+          </div>
+      </div>
+
+      
+  </div>
+</div>
 
 
   <footer>
     <div class="container">
       <p>&copy; 2024 ZenTech. All Rights Reserved.</p>
-      
     </div>
   </footer>
+
+
+
+  
 </body>
 </html>
