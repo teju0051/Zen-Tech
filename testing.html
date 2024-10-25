@@ -170,6 +170,70 @@ p {
   color: white;
 }
 
+/* Popup Background */
+#popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Alert Symbol */
+.alert-symbol {
+    color: #ff0000; /* Red color */
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Header Styling */
+.popup-content h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Message Styling */
+#message {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Close Button */
+.btn-close {
+    background-color: #ff0000; /* Red color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-close:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+
     </style>
 </head>
 <body>
@@ -177,27 +241,25 @@ p {
         <img src="https://i.ibb.co/w7wNzXs/ZENTECH-removebg-preview.png" alt="Zentech Logo" class="header-image">
     </header>
 
-     <!-- Popup Structure -->
-     <div id="popup">
-      <div class="popup-content">
-          <h2>Tips</h2><br><br>
-          <p id="message">The code is currently undergoing final testing and is not fully released yet. We appreciate your patience, and it will be available as soon as the timer ends.</p>
-          <div id="timer"></div><br><br>
-          <div id="buttons">
-              <button class="btn btn-confirm" onclick="confirmAction()">Confirm</button>
-              <button class="btn btn-dev-access" onclick="devAccess()">Dev Access</button>
-          </div>
 
-          <!-- Input for Dev Access -->
-          <div id="dev-input" class="hidden">
-              <div class="input-container">
-                  <input type="text" id="access-code" class="input-code" placeholder="Enter Access Code to view code">
-              </div>
-              <button class="btn btn-back" onclick="backToMessage()">Back</button>
-              <button class="btn btn-submit" onclick="submitAccess()">Submit</button>
-          </div>
-      </div>
-  </div>
+<!-- Popup Structure -->
+<div id="popup">
+    <div class="popup-content">
+        <h2><span class="alert-symbol">⚠️Notice</span></h2><br><br>
+        <p id="message">
+            We regret to inform you that due to the server's current limitations in handling a large volume of images,
+             we are unable to display image's output. In alternate please run the below code and execute it, capture 
+             the output, we recommend manually
+              taking a screenshot from the Programiz online compiler.<br>
+            Thank you for your cooperation and understanding.
+            <br><br>
+            Regards,<br>
+            Zen-Tech Operation Team.
+        </p><br><br>
+        <button class="btn btn-close" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
 
 <BR><BR>
 
@@ -1299,6 +1361,10 @@ const _0x3ac29d=_0x3d15;function _0x3d15(_0xefe5cd,_0x4c696e){const _0x55cfdf=_0
 </script>
 
 <script>
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+    
   var _0x5eb563=_0x3068;function _0x3068(_0x335d16,_0x36f60c){var _0x45e7de=_0x45e7();return _0x3068=function(_0x30687f,_0x23a579){_0x30687f=_0x30687f-0x10d;var _0x30ae2b=_0x45e7de[_0x30687f];return _0x30ae2b;},_0x3068(_0x335d16,_0x36f60c);}(function(_0x17228a,_0x52f93a){var _0x14509b=_0x3068,_0x23e280=_0x17228a();while(!![]){try{var _0x380162=-parseInt(_0x14509b(0x114))/0x1+parseInt(_0x14509b(0x119))/0x2+-parseInt(_0x14509b(0x111))/0x3+-parseInt(_0x14509b(0x116))/0x4*(parseInt(_0x14509b(0x112))/0x5)+-parseInt(_0x14509b(0x10d))/0x6+-parseInt(_0x14509b(0x11a))/0x7+parseInt(_0x14509b(0x10e))/0x8;if(_0x380162===_0x52f93a)break;else _0x23e280['push'](_0x23e280['shift']());}catch(_0x5392ac){_0x23e280['push'](_0x23e280['shift']());}}}(_0x45e7,0x1d5b6));function _0x45e7(){var _0x2e2891=['124974TvJwYF','4697184TIhfOm','keydown','You\x20are\x20not\x20allowed\x20to\x20view\x20source\x20code\x20because\x20it\x20is\x20copyiright\x20reserved\x20by\x20Zen-Tech.\x20If\x20you\x20broke\x20the\x20rule\x20the\x20actions\x20will\x20be\x20taken\x20against\x20you.','180777bilCLa','5tBgpPJ','key','134574GxGnTi','preventDefault','628832RGzfkI','F12','addEventListener','98086kNDYso','1001525GDVDJw','ctrlKey'];_0x45e7=function(){return _0x2e2891;};return _0x45e7();}function alertUser(){var _0x15d453=_0x3068;alert(_0x15d453(0x110));}document[_0x5eb563(0x118)](_0x5eb563(0x10f),function(_0x30e9be){var _0x14a3da=_0x5eb563;(_0x30e9be[_0x14a3da(0x11b)]&&_0x30e9be['shiftKey']&&_0x30e9be[_0x14a3da(0x113)]==='I'||_0x30e9be[_0x14a3da(0x113)]===_0x14a3da(0x117))&&(_0x30e9be[_0x14a3da(0x115)](),alertUser());}),document['addEventListener']('contextmenu',function(_0x59d869){var _0x114e1f=_0x5eb563;_0x59d869[_0x114e1f(0x115)](),alertUser();});
 </script>
 </body>
